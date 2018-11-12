@@ -8,5 +8,17 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maybuzz/frontend-data.git"
+  },
+  "bugs": {
+    "url": "https://github.com/maybuzz/frontend-data/issues"
+  },
+  "homepage": "https://github.com/maybuzz/frontend-data#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "dotenv": "^6.1.0"
+  }
 }
