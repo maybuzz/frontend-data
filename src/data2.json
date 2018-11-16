@@ -121,8 +121,6 @@
    "name": "Boek 8",
    "children": [
     {"name": "Arrays", "size": 8258},
-    {"name": "Colors", "size": 10001},
-    {"name": "Filter", "size": 2324},
     {"name": "Geometry", "size": 10993},
     {
      "name": "heap",
@@ -144,11 +142,18 @@
     },
     {"name": "Maths", "size": 17705},
     {"name": "Orientation", "size": 1486},
+    {
+     "name": "palette",
+     "children": [
+      {"name": "ColorPalette", "size": 6367},
+      {"name": "Palette", "size": 1229},
+      {"name": "ShapePalette", "size": 2059},
+      {"name": "SizePalette", "size": 2291}
+     ]
+    },
     {"name": "Property", "size": 5559},
-    {"name": "Shapes", "size": 19118},
     {"name": "Sort", "size": 6887},
-    {"name": "Stats", "size": 6557},
-    {"name": "Strings", "size": 22026}
+    {"name": "Stats", "size": 6557}
    ]
   },
   {
@@ -169,10 +174,6 @@
      "children": [
       {"name": "AnchorControl", "size": 2138},
       {"name": "ClickControl", "size": 3824},
-      {"name": "Control", "size": 1353},
-      {"name": "ControlList", "size": 4665},
-      {"name": "DragControl", "size": 2649},
-      {"name": "ExpandControl", "size": 2832},
       {"name": "HoverControl", "size": 4896},
       {"name": "IControl", "size": 763},
       {"name": "PanZoomControl", "size": 5222},

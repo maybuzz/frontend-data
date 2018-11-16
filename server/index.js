@@ -1,30 +1,80 @@
 require("dotenv").config()
 
 const axios = require("axios")
-const dallyApi = require("./new-dally-api.js")
+const api = require("@gijslaarman/oba-scraper")
 const chalk = require("chalk")
 const express = require("express")
 const app = express()
 const port = 3000
+const fs = require('fs')
 
-const obaApi = new dallyApi({public: process.env.PUBLIC})
+const client = new api({
+    publicKey: process.env.PUBLIC
+})
 
-obaApi.getAll("search", {
-      facet: "genre(stripverhaal)",
-      q: "format:book",
-      sort: "year",
-      librarian: true,
-      refine: true
+const search = {
+    endpoint: 'search',
+    query: {
+        q: 'format:book',
+        facet: 'genre(stripverhaal)',
+        librarian: true,
+        refine: true
     },
-    {
-      page: 1,
-      pagesize: 20,
-      maxpages: 10
+    pages: {
+        page: 1,
+        pagesize: 20,
+        maxpages: 400
+    },
+    filter: {
+      title: `book.titles && book.titles[0] && book.titles[0].title && book.titles[0].title[0] ? book.titles[0].title[0]._ : null`,
+      info: [
+        {
+          authors:[
+            {
+              illustrator: `book.authors && book.authors[0] && book.authors[0]["main-author"] && book.authors[0]["main-author"][0] ? book.authors[0]["main-author"][0]._ : null`
+            },
+            {
+              authors: `book.authors && book.authors[0] && book.authors[0].author ? book.authors[0].author.map(author => ({author: author._})) : null`
+            }
+          ],
+          meta: [
+            {
+              subject: `book.subjects && book.subjects[0] && book.subjects[0]["topical-subject"] && book.subjects[0]["topical-subject"][0] ? book.subjects[0]["topical-subject"][0]._ : null`
+            },
+            {
+              genres: `book.genres && book.genres[0] && book.genres[0].genre ? book.genres[0].genre.map(genre => ({genre: genre._})) : null`
+            }
+          ],
+          languages: [
+            {
+              language: `book.languages && book.languages[0] && book.languages[0].language && book.languages[0].language[0] ? book.languages[0].language[0]['_'] : null`
+            },
+            {
+              originalLanguage: `book.languages && book.languages[0] && book.languages[0]['original-language'] ? book.languages[0]['original-language'][0]['_'] : null`
+            }
+          ],
+          publication: [
+            {
+              publisher: `book.publication && book.publication[0] && book.publication[0].publishers && book.publication[0].publishers[0] && book.publication[0].publishers[0].publisher && book.publication[0].publishers[0].publisher[0] ? book.publication[0].publishers[0].publisher[0]._ : null`
+            },
+            {
+              place: `book.publication && book.publication[0] && book.publication[0].publishers && book.publication[0].publishers[0] && book.publication[0].publishers[0].publisher && book.publication[0].publishers[0].publisher[0] ? book.publication[0].publishers[0].publisher[0].$.place : null`
+            },
+            {
+              year: `book.publication && book.publication[0].year && book.publication[0].year[0]['_'] ? book.publication[0].year[0]['_'] : null`
+            }
+          ],
+          pages: `Number(totalPages.substring(0, totalPages.indexOf('p')).trim())`
+          // cover: `book.coverimages && book.coverimages[0] && book.coverimages[0].coverimage && book.coverimages[0].coverimage[1] ? book.coverimages[0].coverimage[1]._ : null`
+    }
+  ]
+}
+}
 
-}).then(response => { return response.data
+client.getPages(search).then(response => { return response.data
 }).then(response => {
-  app.get("/", (req, res) => res.json(response))
-  app.listen(port, () => console.log(chalk.green("Listening on port " + port)))
-  console.log(response.length);
+  fs.writeFile('data.json', JSON.stringify(response), 'utf8', () => {
+    console.log('created data.json')
+  })
 })
 .catch(err => console.log(err))

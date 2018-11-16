@@ -87,10 +87,10 @@ module.exports = class OBA {
                                   {
                                     authors:[
                                       {
-                                        main: book.authors && book.authors[0] && book.authors[0]["main-author"] && book.authors[0]["main-author"][0] ? book.authors[0]["main-author"][0]._ : null
+                                        illustrator: book.authors && book.authors[0] && book.authors[0]["main-author"] && book.authors[0]["main-author"][0] ? book.authors[0]["main-author"][0]._ : null
                                       },
                                       {
-                                        others: book.authors && book.authors[0] && book.authors[0].author ? book.authors[0].author.map(author => ({author: author._})) : null
+                                        authors: book.authors && book.authors[0] && book.authors[0].author ? book.authors[0].author.map(author => ({author: author._})) : null
                                       }
                                     ],
                                     meta: [
@@ -101,7 +101,7 @@ module.exports = class OBA {
                                         genres: book.genres && book.genres[0] && book.genres[0].genre ? book.genres[0].genre.map(genre => ({genre: genre._})) : null
                                       }
                                     ],
-                                    languages:[
+                                    languages: [
                                       {
                                         language: book.languages && book.languages[0] && book.languages[0].language && book.languages[0].language[0] ? book.languages[0].language[0]['_'] : null
                                       },
