@@ -2,16 +2,15 @@ require("dotenv").config()
 
 const axios = require("axios")
 const api = require("@gijslaarman/oba-scraper")
-const chalk = require("chalk")
 const express = require("express")
 const app = express()
 const port = 3000
-const fs = require('fs')
 
 const client = new api({
     publicKey: process.env.PUBLIC
 })
 
+// form the gissa node module
 const search = {
     endpoint: 'search',
     query: {
@@ -28,9 +27,14 @@ const search = {
     },
 }
 
+// from the gissa node module
 client.getPages(search).then(response => { return response.data
 }).then(response => {
 
+  // data structure and checks
+  // Folkert-Jan vd Pol helped me to get my data.json right using and editing @gijslaarman/oba-scraper module
+  // I need my data in this structure (objects in objects etc.), this way i can generate the circles of my circle packing. I needed to modify Gijs his module, cuz it didnt like my data structure.
+  // We added some if-statements to check if the filter object that Gijs initiates, exists. I can't use this filter object cuz i need my info array to contain all my data objects. If i use the filter-object, it doesn't do that.
   const data = response.map(book => (
     {
       title: book.titles && book.titles[0] && book.titles[0].title && book.titles[0].title[0] ? book.titles[0].title[0]._ : null,
@@ -78,6 +82,7 @@ client.getPages(search).then(response => { return response.data
       ]
     }
   ))
+  // writing data to json file
   fs.writeFile('data.json', JSON.stringify(data), 'utf8', () => {
     console.log('created data.json')
   })
