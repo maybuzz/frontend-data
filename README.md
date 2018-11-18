@@ -95,7 +95,7 @@ I used `D3` and everything I learned with functional programming to create a dat
 - [ ] Write `Installation`, `API` and `Process`
 - [ ] Finish `Data`, `Code`, `Credits`, `Resources` and `License`
 - [ ] Fix code-snippet in `Code`
-- [x] Connect to API
+- [x] Connect to API (functional-programming)
 - [x] Generate data, write to data.json
 - [ ] Create `D3` datavisualisation with 1000 books (part of data)
 - [ ] Update datavisualisation to complete dataset (+/- 7000 books)
@@ -112,11 +112,11 @@ Gijs Laarman `@gijslaarman`
 
 ### Resources
 
-* [datavizcatalogue](https://datavizcatalogue.com/)    
-  * [circle packing method](https://datavizcatalogue.com/methods/circle_packing.html)   
-  * [tree map method](https://datavizcatalogue.com/methods/treemap.html)    
-* [circle packing example](https://bl.ocks.org/mbostock/7607535)    
-* [d3 layouts](https://d3indepth.com/layouts/)    
-* [gissa oba scraper](https://www.npmjs.com/package/@gijslaarman/oba-scraper)    
+* [Datavizcatalogue](https://datavizcatalogue.com/)    
+  * [Circle packing method](https://datavizcatalogue.com/methods/circle_packing.html)   
+  * [Tree map method](https://datavizcatalogue.com/methods/treemap.html)    
+* [Circle packing example](https://bl.ocks.org/mbostock/7607535)    
+* [D3 layouts](https://d3indepth.com/layouts/)    
+* [Gissa oba scraper](https://www.npmjs.com/package/@gijslaarman/oba-scraper)    
 
 ## License
