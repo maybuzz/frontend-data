@@ -8,7 +8,7 @@
 - [Data](#data)    
   - [API](#API)    
   - [Code](#code)   
-- [Todo](#todo)
+- [To do](#to do)
 - [Credits](#credits)
   - [Resources](#resources)
 - [License](#license)
