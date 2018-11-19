@@ -2,24 +2,33 @@
 
 ## Table of contents
 
-- Introduction
-- Installation
-- Data
-  - API
-  - Code
-- Process
-- To do
-- Credits
-  - Resources
-- License
+- [Installation](## Installation)
+- [Introduction](## Introduction)    
+- [Process](## Process)   
+- [Data](## Data)    
+  - [API](## API)    
+  - [Code](## Code)   
+- [Todo](## Todo)
+- [Credits](## Credits)
+  - [Resources](### Resources)
+- [License](## License)
+
+## Installation
+
+
 
 ## Introduction
 
 I made a datavisualisation about comic books in the public library of Amsterdam (OBA). I used the `OBA API` to collect the data. Read more about the data and code in `Data`
 
-## Installation
 
+## Process
 
+Over d3 en hoe ik mn data in d3 heb omgezet tot cirkeltjes
+
+stukje code ?
+
+I used `D3` and everything I learned with functional programming to create a datavisualisation.
 
 ## Data
 functies en andere dingen die ik heb geleerd dit project
@@ -78,15 +87,6 @@ This is a piece of code from `index.js`. This is where I define my data structur
   ]
 }
 ```
-
-
-## Process
-
-Over d3 en hoe ik mn data in d3 heb omgezet tot cirkeltjes
-
-stukje code ?
-
-I used `D3` and everything I learned with functional programming to create a datavisualisation.
 
 ## To do
 
