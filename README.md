@@ -2,16 +2,16 @@
 
 ## Table of contents
 
-- [Installation](## Installation)
-- [Introduction](## Introduction)    
-- [Process](## Process)   
-- [Data](## Data)    
-  - [API](## API)    
-  - [Code](## Code)   
-- [Todo](## Todo)
-- [Credits](## Credits)
-  - [Resources](### Resources)
-- [License](## License)
+- [Installation](#installation)
+- [Introduction](#introduction)    
+- [Process](#process)   
+- [Data](#data)    
+  - [API](#API)    
+  - [Code](#code)   
+- [Todo](#todo)
+- [Credits](#credits)
+  - [Resources](#resources)
+- [License](#license)
 
 ## Installation
 

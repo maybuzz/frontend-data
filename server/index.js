@@ -10,7 +10,6 @@ const client = new api({
     publicKey: process.env.PUBLIC
 })
 
-// form the gissa node module
 const search = {
     endpoint: 'search',
     query: {
