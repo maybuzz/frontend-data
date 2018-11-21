@@ -32,8 +32,8 @@ stukje code ?
 ## Data
 
 * `.map` ->
-* `[...].substring(0, ...)` -> use bookTitle.substring(0, ...) to get the title string, also used to get the totalPages string
-* `....indexOf('[...]')` -> use .indexOf('/') to cut the string at the '/'
+* `.substring(0, ...)` -> use bookTitle.substring(0, ...) to get the title string, also used to get the totalPages string
+* `.indexOf('[...]')` -> use .indexOf('/') to cut the string at the '/'
 * `.trim()` -> use to cut spaces off both sides, used to convert the title and totalPages
 * `Number()` -> used to covert the totalPages string to a number
 

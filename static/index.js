@@ -1,10 +1,13 @@
 "use strict"
 
+// used Mike Bostock's Zoomable Circle Pack example; https://bl.ocks.org/mbostock/7607535
+// Dennis Wegereef @Denniswegereef, Folkert-Jan vd Pol @FjvdP and Titus Wormer @wooorm helped me setup this datavis
+
 d3.json('/data.json').then(result => {
   var margin = 20
-  var diameter = 400
+  var diameter = 800
 
-  const svg = d3.select('body').append('svg')
+  const svg = d3.select('#vis').append('svg')
     .attr('width', diameter)
     .attr('height', diameter)
 
@@ -12,66 +15,87 @@ d3.json('/data.json').then(result => {
 
   const color = d3.scaleLinear()
     .domain([-1, 5])
-    .range(["hsl(152,80%,80%)", "hsl(228,30%,40%)"])
+    .range(["hsla(255, 80%, 80%, 1)", "hsl(228,30%,40%)"])
     .interpolate(d3.interpolateHcl);
 
   // structure data
+  // setup .nest() with Dennis Weegreef
   const sortByLanguage = d3.nest()
     .key(d => d.language)
     .entries(result)
-    .map(language => ({name: language.key, children: language.values}))
+    .map(language => (
+      {
+        name: language.key,
+        children: language.values
+      }))
 
-  const data = sortByLanguage.map(language => {
-    const bySubject = d3.nest()
-      .key(book => book.subject)
-      .entries(language.children)
-      .map(subject => {
+      const data = sortByLanguage.map(language => {
+        const bySubject = d3.nest()
+          .key(book => book.subject)
+          .entries(language.children)
+          .map(subject => {
+            return {
+              name: subject.key,
+              children: subject.values.map(book => ({...book}))
+            }
+          })
         return {
-          name: subject.key,
-          children: subject.values.map(book => ({...book}))
+          name: language.name,
+          children: bySubject
         }
-      })
-    return {
-      name: language.name,
-      children: bySubject
-    }
-  })[0]
+      })[0]
 
+  //   return {
+  //     name: book.subject == 'overig' ? [book].map(item => item.title) : book.subject,
+  //     children: book.subject !== 'overig' ? [book] : [book].map(item => ({
+  //       name: item.title,
+  //       children: item
+  //     }))
+  // }
+
+// setup circle pack
+// using my nested data with Folkert-Jan vd Pol
+// finished circle pack setup + fixed hierarchy with Titus Wormer
   const root = d3.hierarchy(data)
     .sum(d =>  d.totalPages)
     .sort((a, b) => b.value - a.value);
 
-  console.log('root: ', root);
+// console.log('root: ', root);
 
   const pack = d3.pack()
     .size([diameter, diameter])
     .padding(3)
-  //
-  // let focus = root
+
+  let focus = root
   const nodes = pack(root).descendants()
-  console.log('data: ', nodes);
   let view
+
+ // console.log('data: ', nodes);
 
   var circle = g.selectAll("circle")
     .data(nodes)
     .enter().append("circle")
-      .attr("class", function(d) { return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root"; })
+      .attr("class", function(d) {
+        return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root"; })
       .style("fill", function(d) { return d.children ? color(d.depth) : null; })
-      // .on("click", function(d) { if (focus !== d) zoom(d), d3.event.stopPropagation(); });
+      .on("click", function(d) { if (focus !== d) zoom(d), d3.event.stopPropagation(); });
 
   var text = g.selectAll("text")
     .data(nodes)
     .enter().append("text")
       .attr("class", "label")
+      .style("font-size", function(d) { return Math.min(.2 * d.r, (.2 * d.r - 8) / this.getComputedTextLength() * 24) + "px"; })
+      .attr("dy", ".35em")
       .style("fill-opacity", function(d) { return d.parent === root ? 1 : 0; })
       .style("display", function(d) { return d.parent === root ? "inline" : "none"; })
-      .text(function(d) { return d.data.name || d.data.title; });
+      .text(function(d) {
+        return d.data.name || d.data.title; });
 
   var node = g.selectAll("circle, text");
 
   svg
       .style("background", color(-1))
-      // .on("click", function() { zoom(root); });
+      .on("click", function() { zoom(root); });
 
   zoomTo([root.x, root.y, root.r * 2 + margin]);
 
@@ -94,7 +118,6 @@ d3.json('/data.json').then(result => {
   }
 
   function zoomTo(v) {
-    console.log('zoomTo: ', v);
     var k = diameter / v[2];
     view = v;
     node.attr("transform", function(d) { return "translate(" + (d.x - v[0]) * k + "," + (d.y - v[1]) * k + ")"; });
