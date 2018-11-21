@@ -1,2667 +1,553 @@
 [
   {
-    "name": "De biodiversiteit volgens Flater / Franquin",
-    "size": 100,
-    "children": [
+    "title": "De biodiversiteit volgens Flater / Franquin",
+    "illustrator": "Franquin",
+    "otherAuthors": [
       {
-        "name": "authors",
-        "children": [
-          {
-            "name": "illustrator",
-            "size": 75,
-            "children": [
-              {
-                "name": "Franquin"
-              }
-            ]
-          },
-          {
-            "name": "other authors",
-            "size": 75,
-            "children": [
-              {
-                "name": [
-                  {
-                    "author": "Gilles Dal"
-                  },
-                  {
-                    "author": "Erwin Cavens"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "author": "Gilles Dal"
       },
       {
-        "name": "meta",
-        "size": 75,
-        "children": [
-          {
-            "name": "subject",
-            "size": 25,
-            "children": [
-              {
-                "name": "Biologische diversiteit"
-              }
-            ]
-          },
-          {
-            "name": "genres",
-            "size": 50,
-            "children": [
-              {
-                "name": [
-                  {
-                    "genre": "Humor"
-                  },
-                  {
-                    "genre": "Stripverhaal"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "languages",
-        "size": 50,
-        "children": [
-          {
-            "name": "language",
-            "size": 25,
-            "children": [
-              {
-                "name": "dut"
-              }
-            ]
-          },
-          {
-            "name": "original language",
-            "size": 25,
-            "children": [
-              {
-                "name": "fre"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "publication",
-        "size": 75,
-        "children": [
-          {
-            "name": "publisher",
-            "size": 25,
-            "children": [
-              {
-                "name": "Marsu Productions"
-              }
-            ]
-          },
-          {
-            "name": "place",
-            "size": 25,
-            "children": [
-              {
-                "name": "Monaco"
-              }
-            ]
-          },
-          {
-            "name": "year",
-            "size": 25,
-            "children": [
-              {
-                "name": "2020"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "pages",
-        "size": 25,
-        "children": [
-          {
-            "name": "47 p: gekleurde ill ; 30 cm"
-          }
-        ]
+        "author": "Erwin Cavens"
       }
-    ]
+    ],
+    "subject": "Biologische diversiteit",
+    "genres": [
+      {
+        "genre": "Humor"
+      },
+      {
+        "genre": "Stripverhaal"
+      }
+    ],
+    "language": "dut",
+    "originalLanguage": "fre",
+    "publisher": "Marsu Productions",
+    "place": "Monaco",
+    "year": "2020",
+    "totalPages": 47
   },
   {
-    "name": "Afdwalingen / getekend door Andreas",
-    "size": 100,
-    "children": [
+    "title": "Afdwalingen / getekend door Andreas",
+    "illustrator": "Andreas",
+    "otherAuthors": [
       {
-        "name": "authors",
-        "children": [
-          {
-            "name": "illustrator",
-            "size": 75,
-            "children": [
-              {
-                "name": "Andreas"
-              }
-            ]
-          },
-          {
-            "name": "other authors",
-            "size": 75,
-            "children": [
-              {
-                "name": [
-                  {
-                    "author": "Mazan"
-                  },
-                  {
-                    "author": "... Dieter"
-                  },
-                  {
-                    "author": "... Cornette"
-                  },
-                  {
-                    "author": "Hyuna"
-                  },
-                  {
-                    "author": "... Raven"
-                  },
-                  {
-                    "author": "... Cochet"
-                  },
-                  {
-                    "author": "Tonio van Vugt"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "author": "Mazan"
       },
       {
-        "name": "meta",
-        "size": 75,
-        "children": [
-          {
-            "name": "subject",
-            "size": 25,
-            "children": [
-              {
-                "name": null
-              }
-            ]
-          },
-          {
-            "name": "genres",
-            "size": 50,
-            "children": [
-              {
-                "name": [
-                  {
-                    "genre": "Stripverhaal"
-                  },
-                  {
-                    "genre": "Verhalenbundel"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "author": "... Dieter"
       },
       {
-        "name": "languages",
-        "size": 50,
-        "children": [
-          {
-            "name": "language",
-            "size": 25,
-            "children": [
-              {
-                "name": "dut"
-              }
-            ]
-          },
-          {
-            "name": "original language",
-            "size": 25,
-            "children": [
-              {
-                "name": "fre"
-              }
-            ]
-          }
-        ]
+        "author": "... Cornette"
       },
       {
-        "name": "publication",
-        "size": 75,
-        "children": [
-          {
-            "name": "publisher",
-            "size": 25,
-            "children": [
-              {
-                "name": "Sherpa"
-              }
-            ]
-          },
-          {
-            "name": "place",
-            "size": 25,
-            "children": [
-              {
-                "name": "[Haarlem]"
-              }
-            ]
-          },
-          {
-            "name": "year",
-            "size": 25,
-            "children": [
-              {
-                "name": "2019"
-              }
-            ]
-          }
-        ]
+        "author": "Hyuna"
       },
       {
-        "name": "pages",
-        "size": 25,
-        "children": [
-          {
-            "name": "46 pagina's: gekleurde illustraties ; 32 cm"
-          }
-        ]
+        "author": "... Raven"
+      },
+      {
+        "author": "... Cochet"
+      },
+      {
+        "author": "Tonio van Vugt"
       }
-    ]
+    ],
+    "subject": null,
+    "genres": [
+      {
+        "genre": "Stripverhaal"
+      },
+      {
+        "genre": "Verhalenbundel"
+      }
+    ],
+    "language": "dut",
+    "originalLanguage": "fre",
+    "publisher": "Sherpa",
+    "place": "[Haarlem]",
+    "year": "2019",
+    "totalPages": 46
   },
   {
-    "name": "Dog man / geschreven en getekend door Dav Pilkey als Sjors Baard en Harold Hutje",
-    "size": 100,
-    "children": [
+    "title": "Dog man / geschreven en getekend door Dav Pilkey als Sjors Baard en Harold Hutje",
+    "illustrator": "Pilkey, Dav",
+    "otherAuthors": [
       {
-        "name": "authors",
-        "children": [
-          {
-            "name": "illustrator",
-            "size": 75,
-            "children": [
-              {
-                "name": "Pilkey, Dav"
-              }
-            ]
-          },
-          {
-            "name": "other authors",
-            "size": 75,
-            "children": [
-              {
-                "name": [
-                  {
-                    "author": "Jose Garibaldi"
-                  },
-                  {
-                    "author": "Tjibbe Veldkamp"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "author": "Jose Garibaldi"
       },
       {
-        "name": "meta",
-        "size": 75,
-        "children": [
-          {
-            "name": "subject",
-            "size": 25,
-            "children": [
-              {
-                "name": "Politieagenten"
-              }
-            ]
-          },
-          {
-            "name": "genres",
-            "size": 50,
-            "children": [
-              {
-                "name": [
-                  {
-                    "genre": "Detective"
-                  },
-                  {
-                    "genre": "Humor"
-                  },
-                  {
-                    "genre": "Stripverhaal"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "languages",
-        "size": 50,
-        "children": [
-          {
-            "name": "language",
-            "size": 25,
-            "children": [
-              {
-                "name": "dut"
-              }
-            ]
-          },
-          {
-            "name": "original language",
-            "size": 25,
-            "children": [
-              {
-                "name": "eng"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "publication",
-        "size": 75,
-        "children": [
-          {
-            "name": "publisher",
-            "size": 25,
-            "children": [
-              {
-                "name": "Condor"
-              }
-            ]
-          },
-          {
-            "name": "place",
-            "size": 25,
-            "children": [
-              {
-                "name": "[Amsterdam]"
-              }
-            ]
-          },
-          {
-            "name": "year",
-            "size": 25,
-            "children": [
-              {
-                "name": "2018"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "pages",
-        "size": 25,
-        "children": [
-          {
-            "name": "231 pagina's: gekleurde illustraties ; 22 cm"
-          }
-        ]
+        "author": "Tjibbe Veldkamp"
       }
-    ]
+    ],
+    "subject": "Politieagenten",
+    "genres": [
+      {
+        "genre": "Detective"
+      },
+      {
+        "genre": "Humor"
+      },
+      {
+        "genre": "Stripverhaal"
+      }
+    ],
+    "language": "dut",
+    "originalLanguage": "eng",
+    "publisher": "Condor",
+    "place": "[Amsterdam]",
+    "year": "2018",
+    "totalPages": 231
   },
   {
-    "name": "Vrolijke stripverhalen van Donald Duck 23 / hoofdredactie: Annemiek van Bakel, Joan Lommen (adj.)",
-    "size": 100,
-    "children": [
+    "title": "Vrolijke stripverhalen van Donald Duck 23 / hoofdredactie: Annemiek van Bakel, Joan Lommen (adj.)",
+    "illustrator": "Annemiek van Bakel",
+    "otherAuthors": [
       {
-        "name": "authors",
-        "children": [
-          {
-            "name": "illustrator",
-            "size": 75,
-            "children": [
-              {
-                "name": "Annemiek van Bakel"
-              }
-            ]
-          },
-          {
-            "name": "other authors",
-            "size": 75,
-            "children": [
-              {
-                "name": [
-                  {
-                    "author": "Wilma van den Bosch"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "meta",
-        "size": 75,
-        "children": [
-          {
-            "name": "subject",
-            "size": 25,
-            "children": [
-              {
-                "name": null
-              }
-            ]
-          },
-          {
-            "name": "genres",
-            "size": 50,
-            "children": [
-              {
-                "name": [
-                  {
-                    "genre": "Stripverhaal"
-                  },
-                  {
-                    "genre": "Verhalenbundel"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "languages",
-        "size": 50,
-        "children": [
-          {
-            "name": "language",
-            "size": 25,
-            "children": [
-              {
-                "name": "dut"
-              }
-            ]
-          },
-          {
-            "name": "original language",
-            "size": 25,
-            "children": [
-              {
-                "name": null
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "publication",
-        "size": 75,
-        "children": [
-          {
-            "name": "publisher",
-            "size": 25,
-            "children": [
-              {}
-            ]
-          },
-          {
-            "name": "place",
-            "size": 25,
-            "children": [
-              {
-                "name": "Hoofddorp"
-              }
-            ]
-          },
-          {
-            "name": "year",
-            "size": 25,
-            "children": [
-              {
-                "name": "2018"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "pages",
-        "size": 25,
-        "children": [
-          {
-            "name": "48 pagina's: gekleurde illustraties ; 28 cm"
-          }
-        ]
+        "author": "Wilma van den Bosch"
       }
-    ]
+    ],
+    "subject": null,
+    "genres": [
+      {
+        "genre": "Stripverhaal"
+      },
+      {
+        "genre": "Verhalenbundel"
+      }
+    ],
+    "language": "dut",
+    "originalLanguage": null,
+    "place": "Hoofddorp",
+    "year": "2018",
+    "totalPages": 48
   },
   {
-    "name": "De spannendste avonturen van Donald Duck Deel 16,  / hoofdredactie: Annemiek van Bakel, Joan Lommen ; redactie: Jos Beekman, Esther Holtkamp, Jetty Koster (chef), Lotte Roep, Simone Ruitenbeek, Bas Schuddeboom, Jim van der Weele ; tekenafdeling: Wilma van den Bosch, Frans Hasselaar (chef), Michel Nadorp, Jan-Roman Pikula, Viktor Venema",
-    "size": 100,
-    "children": [
+    "title": "De spannendste avonturen van Donald Duck Deel 16,  / hoofdredactie: Annemiek van Bakel, Joan Lommen ; redactie: Jos Beekman, Esther Holtkamp, Jetty Koster (chef), Lotte Roep, Simone Ruitenbeek, Bas Schuddeboom, Jim van der Weele ; tekenafdeling: Wilma van den Bosch, Frans Hasselaar (chef), Michel Nadorp, Jan-Roman Pikula, Viktor Venema",
+    "illustrator": "van den Bosch, Wilma",
+    "otherAuthors": [
       {
-        "name": "authors",
-        "children": [
-          {
-            "name": "illustrator",
-            "size": 75,
-            "children": [
-              {
-                "name": "van den Bosch, Wilma"
-              }
-            ]
-          },
-          {
-            "name": "other authors",
-            "size": 75,
-            "children": [
-              {
-                "name": [
-                  {
-                    "author": "Frans Hasselaar"
-                  },
-                  {
-                    "author": "Michel Nadorp"
-                  },
-                  {
-                    "author": "Jan-Roman Pikula"
-                  },
-                  {
-                    "author": "Viktor Venema"
-                  },
-                  {
-                    "author": "Annemiek van Bakel"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "author": "Frans Hasselaar"
       },
       {
-        "name": "meta",
-        "size": 75,
-        "children": [
-          {
-            "name": "subject",
-            "size": 25,
-            "children": [
-              {
-                "name": null
-              }
-            ]
-          },
-          {
-            "name": "genres",
-            "size": 50,
-            "children": [
-              {
-                "name": [
-                  {
-                    "genre": "Stripverhaal"
-                  },
-                  {
-                    "genre": "Verhalenbundel"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "author": "Michel Nadorp"
       },
       {
-        "name": "languages",
-        "size": 50,
-        "children": [
-          {
-            "name": "language",
-            "size": 25,
-            "children": [
-              {
-                "name": "dut"
-              }
-            ]
-          },
-          {
-            "name": "original language",
-            "size": 25,
-            "children": [
-              {
-                "name": "eng"
-              }
-            ]
-          }
-        ]
+        "author": "Jan-Roman Pikula"
       },
       {
-        "name": "publication",
-        "size": 75,
-        "children": [
-          {
-            "name": "publisher",
-            "size": 25,
-            "children": [
-              {}
-            ]
-          },
-          {
-            "name": "place",
-            "size": 25,
-            "children": [
-              {
-                "name": "Hoofddorp"
-              }
-            ]
-          },
-          {
-            "name": "year",
-            "size": 25,
-            "children": [
-              {
-                "name": "2018"
-              }
-            ]
-          }
-        ]
+        "author": "Viktor Venema"
       },
       {
-        "name": "pages",
-        "size": 25,
-        "children": [
-          {
-            "name": "96 pagina's: gekleurde illustraties ; 27 cm"
-          }
-        ]
+        "author": "Annemiek van Bakel"
       }
-    ]
+    ],
+    "subject": null,
+    "genres": [
+      {
+        "genre": "Stripverhaal"
+      },
+      {
+        "genre": "Verhalenbundel"
+      }
+    ],
+    "language": "dut",
+    "originalLanguage": "eng",
+    "place": "Hoofddorp",
+    "year": "2018",
+    "totalPages": 96
   },
   {
-    "name": "Jan, Jans en de kinderen / Jan Kruis 60,  / door Studio Jan Kruis ; hoofdredactie Hilmar Mulder, Nicolette Fox ; [tekenaars] Studio Jan Kruis, Maarten Gerritsen, Rob Phielix, Daniel van den Broek ; stripteksten Peter Weijenberg ; inkleuringen: Wilma Leenders ; eindredactie Louise Tholenaar",
-    "size": 100,
-    "children": [
+    "title": "Jan, Jans en de kinderen / Jan Kruis 60,  / door Studio Jan Kruis ; hoofdredactie Hilmar Mulder, Nicolette Fox ; [tekenaars] Studio Jan Kruis, Maarten Gerritsen, Rob Phielix, Daniel van den Broek ; stripteksten Peter Weijenberg ; inkleuringen: Wilma Leenders ; eindredactie Louise Tholenaar",
+    "illustrator": "Hilmar Mulder",
+    "otherAuthors": [
       {
-        "name": "authors",
-        "children": [
-          {
-            "name": "illustrator",
-            "size": 75,
-            "children": [
-              {
-                "name": "Hilmar Mulder"
-              }
-            ]
-          },
-          {
-            "name": "other authors",
-            "size": 75,
-            "children": [
-              {
-                "name": [
-                  {
-                    "author": "Maarten Gerritsen"
-                  },
-                  {
-                    "author": "Peter Weijenberg"
-                  },
-                  {
-                    "author": "Wilma Leenders"
-                  },
-                  {
-                    "author": "Kruis, Studio Jan"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "author": "Maarten Gerritsen"
       },
       {
-        "name": "meta",
-        "size": 75,
-        "children": [
-          {
-            "name": "subject",
-            "size": 25,
-            "children": [
-              {
-                "name": null
-              }
-            ]
-          },
-          {
-            "name": "genres",
-            "size": 50,
-            "children": [
-              {
-                "name": [
-                  {
-                    "genre": "Stripverhaal"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "author": "Peter Weijenberg"
       },
       {
-        "name": "languages",
-        "size": 50,
-        "children": [
-          {
-            "name": "language",
-            "size": 25,
-            "children": [
-              {
-                "name": "dut"
-              }
-            ]
-          },
-          {
-            "name": "original language",
-            "size": 25,
-            "children": [
-              {
-                "name": null
-              }
-            ]
-          }
-        ]
+        "author": "Wilma Leenders"
       },
       {
-        "name": "publication",
-        "size": 75,
-        "children": [
-          {
-            "name": "publisher",
-            "size": 25,
-            "children": [
-              {
-                "name": "Sanoma"
-              }
-            ]
-          },
-          {
-            "name": "place",
-            "size": 25,
-            "children": [
-              {
-                "name": "[Hoofddorp]"
-              }
-            ]
-          },
-          {
-            "name": "year",
-            "size": 25,
-            "children": [
-              {
-                "name": "2018"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "pages",
-        "size": 25,
-        "children": [
-          {
-            "name": "48 pagina's: gekleurde illustraties ; 29 cm"
-          }
-        ]
+        "author": "Kruis, Studio Jan"
       }
-    ]
+    ],
+    "subject": null,
+    "genres": [
+      {
+        "genre": "Stripverhaal"
+      }
+    ],
+    "language": "dut",
+    "originalLanguage": null,
+    "publisher": "Sanoma",
+    "place": "[Hoofddorp]",
+    "year": "2018",
+    "totalPages": 48
   },
   {
-    "name": "Vrolijke stripverhalen van Donald Duck 24 / hoofdredactie: Annemiek van Bakel, Joan Lommen (adj.)",
-    "size": 100,
-    "children": [
+    "title": "Vrolijke stripverhalen van Donald Duck 24 / hoofdredactie: Annemiek van Bakel, Joan Lommen (adj.)",
+    "illustrator": "Annemiek van Bakel",
+    "otherAuthors": [
       {
-        "name": "authors",
-        "children": [
-          {
-            "name": "illustrator",
-            "size": 75,
-            "children": [
-              {
-                "name": "Annemiek van Bakel"
-              }
-            ]
-          },
-          {
-            "name": "other authors",
-            "size": 75,
-            "children": [
-              {
-                "name": [
-                  {
-                    "author": "Wilma van den Bosch"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "meta",
-        "size": 75,
-        "children": [
-          {
-            "name": "subject",
-            "size": 25,
-            "children": [
-              {
-                "name": null
-              }
-            ]
-          },
-          {
-            "name": "genres",
-            "size": 50,
-            "children": [
-              {
-                "name": [
-                  {
-                    "genre": "Stripverhaal"
-                  },
-                  {
-                    "genre": "Verhalenbundel"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "languages",
-        "size": 50,
-        "children": [
-          {
-            "name": "language",
-            "size": 25,
-            "children": [
-              {
-                "name": "dut"
-              }
-            ]
-          },
-          {
-            "name": "original language",
-            "size": 25,
-            "children": [
-              {
-                "name": null
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "publication",
-        "size": 75,
-        "children": [
-          {
-            "name": "publisher",
-            "size": 25,
-            "children": [
-              {}
-            ]
-          },
-          {
-            "name": "place",
-            "size": 25,
-            "children": [
-              {
-                "name": "Hoofddorp"
-              }
-            ]
-          },
-          {
-            "name": "year",
-            "size": 25,
-            "children": [
-              {
-                "name": "2018"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "pages",
-        "size": 25,
-        "children": [
-          {
-            "name": "48 pagina's: gekleurde illustraties ; 28 cm"
-          }
-        ]
+        "author": "Wilma van den Bosch"
       }
-    ]
+    ],
+    "subject": null,
+    "genres": [
+      {
+        "genre": "Stripverhaal"
+      },
+      {
+        "genre": "Verhalenbundel"
+      }
+    ],
+    "language": "dut",
+    "originalLanguage": null,
+    "place": "Hoofddorp",
+    "year": "2018",
+    "totalPages": 48
   },
   {
-    "name": "Mis! / Fred Diks & Andrea Kruis",
-    "size": 100,
-    "children": [
+    "title": "Mis! / Fred Diks & Andrea Kruis",
+    "illustrator": "Kruis, Andrea",
+    "otherAuthors": [
       {
-        "name": "authors",
-        "children": [
-          {
-            "name": "illustrator",
-            "size": 75,
-            "children": [
-              {
-                "name": "Kruis, Andrea"
-              }
-            ]
-          },
-          {
-            "name": "other authors",
-            "size": 75,
-            "children": [
-              {
-                "name": [
-                  {
-                    "author": "Fred Diks"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "meta",
-        "size": 75,
-        "children": [
-          {
-            "name": "subject",
-            "size": 25,
-            "children": [
-              {
-                "name": "Voetbal"
-              }
-            ]
-          },
-          {
-            "name": "genres",
-            "size": 50,
-            "children": [
-              {
-                "name": [
-                  {
-                    "genre": "Sport"
-                  },
-                  {
-                    "genre": "Stripverhaal"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "languages",
-        "size": 50,
-        "children": [
-          {
-            "name": "language",
-            "size": 25,
-            "children": [
-              {
-                "name": "dut"
-              }
-            ]
-          },
-          {
-            "name": "original language",
-            "size": 25,
-            "children": [
-              {
-                "name": null
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "publication",
-        "size": 75,
-        "children": [
-          {
-            "name": "publisher",
-            "size": 25,
-            "children": [
-              {
-                "name": "Kluitman"
-              }
-            ]
-          },
-          {
-            "name": "place",
-            "size": 25,
-            "children": [
-              {
-                "name": "[Alkmaar]"
-              }
-            ]
-          },
-          {
-            "name": "year",
-            "size": 25,
-            "children": [
-              {
-                "name": "2018"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "pages",
-        "size": 25,
-        "children": [
-          {
-            "name": "25 pagina's: gekleurde illustraties ; 26 cm"
-          }
-        ]
+        "author": "Fred Diks"
       }
-    ]
+    ],
+    "subject": "Voetbal",
+    "genres": [
+      {
+        "genre": "Sport"
+      },
+      {
+        "genre": "Stripverhaal"
+      }
+    ],
+    "language": "dut",
+    "originalLanguage": null,
+    "publisher": "Kluitman",
+    "place": "[Alkmaar]",
+    "year": "2018",
+    "totalPages": 25
   },
   {
-    "name": "BRBS 2.0 / Willy Vandersteen",
-    "size": 100,
-    "children": [
+    "title": "BRBS 2.0 / Willy Vandersteen",
+    "illustrator": "Morjaeu, Luc",
+    "otherAuthors": [
       {
-        "name": "authors",
-        "children": [
-          {
-            "name": "illustrator",
-            "size": 75,
-            "children": [
-              {
-                "name": "Morjaeu, Luc"
-              }
-            ]
-          },
-          {
-            "name": "other authors",
-            "size": 75,
-            "children": [
-              {
-                "name": [
-                  {
-                    "author": "Peter Van Gucht"
-                  },
-                  {
-                    "author": "Willy Vandersteen"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "author": "Peter Van Gucht"
       },
       {
-        "name": "meta",
-        "size": 75,
-        "children": [
-          {
-            "name": "subject",
-            "size": 25,
-            "children": [
-              {
-                "name": null
-              }
-            ]
-          },
-          {
-            "name": "genres",
-            "size": 50,
-            "children": [
-              {
-                "name": [
-                  {
-                    "genre": "Stripverhaal"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "languages",
-        "size": 50,
-        "children": [
-          {
-            "name": "language",
-            "size": 25,
-            "children": [
-              {
-                "name": "dut"
-              }
-            ]
-          },
-          {
-            "name": "original language",
-            "size": 25,
-            "children": [
-              {
-                "name": null
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "publication",
-        "size": 75,
-        "children": [
-          {
-            "name": "publisher",
-            "size": 25,
-            "children": [
-              {
-                "name": "Standaard Uitgeverij"
-              }
-            ]
-          },
-          {
-            "name": "place",
-            "size": 25,
-            "children": [
-              {
-                "name": "Antwerpen"
-              }
-            ]
-          },
-          {
-            "name": "year",
-            "size": 25,
-            "children": [
-              {
-                "name": "2018"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "pages",
-        "size": 25,
-        "children": [
-          {
-            "name": "48 ongenummerde pagina's: gekleurde illustraties ; 30 cm"
-          }
-        ]
+        "author": "Willy Vandersteen"
       }
-    ]
+    ],
+    "subject": null,
+    "genres": [
+      {
+        "genre": "Stripverhaal"
+      }
+    ],
+    "language": "dut",
+    "originalLanguage": null,
+    "publisher": "Standaard Uitgeverij",
+    "place": "Antwerpen",
+    "year": "2018",
+    "totalPages": 48
   },
   {
-    "name": "Otto's ongelofelijke onderzeeër / Johan Klungel",
-    "size": 100,
-    "children": [
+    "title": "Otto's ongelofelijke onderzeeër / Johan Klungel",
+    "illustrator": "Klungel, Johan",
+    "otherAuthors": null,
+    "subject": "Uitvindingen",
+    "genres": [
       {
-        "name": "authors",
-        "children": [
-          {
-            "name": "illustrator",
-            "size": 75,
-            "children": [
-              {
-                "name": "Klungel, Johan"
-              }
-            ]
-          },
-          {
-            "name": "other authors",
-            "size": 75,
-            "children": [
-              {
-                "name": null
-              }
-            ]
-          }
-        ]
+        "genre": "Avontureroman"
       },
       {
-        "name": "meta",
-        "size": 75,
-        "children": [
-          {
-            "name": "subject",
-            "size": 25,
-            "children": [
-              {
-                "name": "Uitvindingen"
-              }
-            ]
-          },
-          {
-            "name": "genres",
-            "size": 50,
-            "children": [
-              {
-                "name": [
-                  {
-                    "genre": "Avontureroman"
-                  },
-                  {
-                    "genre": "Stripverhaal"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "languages",
-        "size": 50,
-        "children": [
-          {
-            "name": "language",
-            "size": 25,
-            "children": [
-              {
-                "name": "dut"
-              }
-            ]
-          },
-          {
-            "name": "original language",
-            "size": 25,
-            "children": [
-              {
-                "name": null
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "publication",
-        "size": 75,
-        "children": [
-          {
-            "name": "publisher",
-            "size": 25,
-            "children": [
-              {
-                "name": "Zwijsen, sluit aan bij school"
-              }
-            ]
-          },
-          {
-            "name": "place",
-            "size": 25,
-            "children": [
-              {
-                "name": "Tilburg"
-              }
-            ]
-          },
-          {
-            "name": "year",
-            "size": 25,
-            "children": [
-              {
-                "name": "2018"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "pages",
-        "size": 25,
-        "children": [
-          {
-            "name": "27 pagina's: gekleurde illustraties ; 27 cm"
-          }
-        ]
+        "genre": "Stripverhaal"
       }
-    ]
+    ],
+    "language": "dut",
+    "originalLanguage": null,
+    "publisher": "Zwijsen, sluit aan bij school",
+    "place": "Tilburg",
+    "year": "2018",
+    "totalPages": 27
   },
   {
-    "name": "Niek de Groot en zijn vrienden / Lincoln Peirce",
-    "size": 100,
-    "children": [
+    "title": "Niek de Groot en zijn vrienden / Lincoln Peirce",
+    "illustrator": "Peirce, Lincoln",
+    "otherAuthors": [
       {
-        "name": "authors",
-        "children": [
-          {
-            "name": "illustrator",
-            "size": 75,
-            "children": [
-              {
-                "name": "Peirce, Lincoln"
-              }
-            ]
-          },
-          {
-            "name": "other authors",
-            "size": 75,
-            "children": [
-              {
-                "name": [
-                  {
-                    "author": "Anne Douqué"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "meta",
-        "size": 75,
-        "children": [
-          {
-            "name": "subject",
-            "size": 25,
-            "children": [
-              {
-                "name": "Schoolleven"
-              }
-            ]
-          },
-          {
-            "name": "genres",
-            "size": 50,
-            "children": [
-              {
-                "name": [
-                  {
-                    "genre": "School"
-                  },
-                  {
-                    "genre": "Stripverhaal"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "languages",
-        "size": 50,
-        "children": [
-          {
-            "name": "language",
-            "size": 25,
-            "children": [
-              {
-                "name": "dut"
-              }
-            ]
-          },
-          {
-            "name": "original language",
-            "size": 25,
-            "children": [
-              {
-                "name": "eng"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "publication",
-        "size": 75,
-        "children": [
-          {
-            "name": "publisher",
-            "size": 25,
-            "children": [
-              {
-                "name": "Uitgeverij De Fontein Jeugd"
-              }
-            ]
-          },
-          {
-            "name": "place",
-            "size": 25,
-            "children": [
-              {
-                "name": "Utrecht"
-              }
-            ]
-          },
-          {
-            "name": "year",
-            "size": 25,
-            "children": [
-              {
-                "name": "2018"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "pages",
-        "size": 25,
-        "children": [
-          {
-            "name": "223 pagina's: gekleurde illustraties ; 23 cm"
-          }
-        ]
+        "author": "Anne Douqué"
       }
-    ]
+    ],
+    "subject": "Schoolleven",
+    "genres": [
+      {
+        "genre": "School"
+      },
+      {
+        "genre": "Stripverhaal"
+      }
+    ],
+    "language": "dut",
+    "originalLanguage": "eng",
+    "publisher": "Uitgeverij De Fontein Jeugd",
+    "place": "Utrecht",
+    "year": "2018",
+    "totalPages": 223
   },
   {
-    "name": "De spannendste avonturen van Donald Duck Deel 15,  / hoofdredactie: Annemiek van Bakel, Joan Lommen ; redactie: Jos Beekman, Esther Holtkamp, Jetty Koster (chef), Lotte Roep, Simone Ruitenbeek, Bas Schuddeboom, Jim van der Weele ; tekenafdeling: Wilma van den Bosch, Frans Hasselaar (chef), Michel Nadorp, Jan-Roman Pikula, Viktor Venema",
-    "size": 100,
-    "children": [
+    "title": "De spannendste avonturen van Donald Duck Deel 15,  / hoofdredactie: Annemiek van Bakel, Joan Lommen ; redactie: Jos Beekman, Esther Holtkamp, Jetty Koster (chef), Lotte Roep, Simone Ruitenbeek, Bas Schuddeboom, Jim van der Weele ; tekenafdeling: Wilma van den Bosch, Frans Hasselaar (chef), Michel Nadorp, Jan-Roman Pikula, Viktor Venema",
+    "illustrator": "van den Bosch, Wilma",
+    "otherAuthors": [
       {
-        "name": "authors",
-        "children": [
-          {
-            "name": "illustrator",
-            "size": 75,
-            "children": [
-              {
-                "name": "van den Bosch, Wilma"
-              }
-            ]
-          },
-          {
-            "name": "other authors",
-            "size": 75,
-            "children": [
-              {
-                "name": [
-                  {
-                    "author": "Frans Hasselaar"
-                  },
-                  {
-                    "author": "Michel Nadorp"
-                  },
-                  {
-                    "author": "Jan-Roman Pikula"
-                  },
-                  {
-                    "author": "Viktor Venema"
-                  },
-                  {
-                    "author": "Annemiek van Bakel"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "author": "Frans Hasselaar"
       },
       {
-        "name": "meta",
-        "size": 75,
-        "children": [
-          {
-            "name": "subject",
-            "size": 25,
-            "children": [
-              {
-                "name": null
-              }
-            ]
-          },
-          {
-            "name": "genres",
-            "size": 50,
-            "children": [
-              {
-                "name": [
-                  {
-                    "genre": "Stripverhaal"
-                  },
-                  {
-                    "genre": "Verhalenbundel"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "author": "Michel Nadorp"
       },
       {
-        "name": "languages",
-        "size": 50,
-        "children": [
-          {
-            "name": "language",
-            "size": 25,
-            "children": [
-              {
-                "name": "dut"
-              }
-            ]
-          },
-          {
-            "name": "original language",
-            "size": 25,
-            "children": [
-              {
-                "name": "eng"
-              }
-            ]
-          }
-        ]
+        "author": "Jan-Roman Pikula"
       },
       {
-        "name": "publication",
-        "size": 75,
-        "children": [
-          {
-            "name": "publisher",
-            "size": 25,
-            "children": [
-              {}
-            ]
-          },
-          {
-            "name": "place",
-            "size": 25,
-            "children": [
-              {
-                "name": "Hoofddorp"
-              }
-            ]
-          },
-          {
-            "name": "year",
-            "size": 25,
-            "children": [
-              {
-                "name": "2018"
-              }
-            ]
-          }
-        ]
+        "author": "Viktor Venema"
       },
       {
-        "name": "pages",
-        "size": 25,
-        "children": [
-          {
-            "name": "96 pagina's: gekleurde illustraties ; 27 cm"
-          }
-        ]
+        "author": "Annemiek van Bakel"
       }
-    ]
+    ],
+    "subject": null,
+    "genres": [
+      {
+        "genre": "Stripverhaal"
+      },
+      {
+        "genre": "Verhalenbundel"
+      }
+    ],
+    "language": "dut",
+    "originalLanguage": "eng",
+    "place": "Hoofddorp",
+    "year": "2018",
+    "totalPages": 96
   },
   {
-    "name": "Donald Duck themapocket / hoofdredactie: Annemiek van Bakel, Joan Lommen",
-    "size": 100,
-    "children": [
+    "title": "Donald Duck themapocket / hoofdredactie: Annemiek van Bakel, Joan Lommen",
+    "illustrator": "Annemiek van Bakel",
+    "otherAuthors": [
       {
-        "name": "authors",
-        "children": [
-          {
-            "name": "illustrator",
-            "size": 75,
-            "children": [
-              {
-                "name": "Annemiek van Bakel"
-              }
-            ]
-          },
-          {
-            "name": "other authors",
-            "size": 75,
-            "children": [
-              {
-                "name": [
-                  {
-                    "author": "Olav Beemer"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "meta",
-        "size": 75,
-        "children": [
-          {
-            "name": "subject",
-            "size": 25,
-            "children": [
-              {
-                "name": null
-              }
-            ]
-          },
-          {
-            "name": "genres",
-            "size": 50,
-            "children": [
-              {
-                "name": [
-                  {
-                    "genre": "Stripverhaal"
-                  },
-                  {
-                    "genre": "Verhalenbundel"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "languages",
-        "size": 50,
-        "children": [
-          {
-            "name": "language",
-            "size": 25,
-            "children": [
-              {
-                "name": "dut"
-              }
-            ]
-          },
-          {
-            "name": "original language",
-            "size": 25,
-            "children": [
-              {
-                "name": "eng"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "publication",
-        "size": 75,
-        "children": [
-          {
-            "name": "publisher",
-            "size": 25,
-            "children": [
-              {}
-            ]
-          },
-          {
-            "name": "place",
-            "size": 25,
-            "children": [
-              {
-                "name": "Hoofddorp"
-              }
-            ]
-          },
-          {
-            "name": "year",
-            "size": 25,
-            "children": [
-              {
-                "name": "2018"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "pages",
-        "size": 25,
-        "children": [
-          {
-            "name": "512 pagina's: gekleurde illustraties ; 19 cm"
-          }
-        ]
+        "author": "Olav Beemer"
       }
-    ]
+    ],
+    "subject": null,
+    "genres": [
+      {
+        "genre": "Stripverhaal"
+      },
+      {
+        "genre": "Verhalenbundel"
+      }
+    ],
+    "language": "dut",
+    "originalLanguage": "eng",
+    "place": "Hoofddorp",
+    "year": "2018",
+    "totalPages": 512
   },
   {
-    "name": "Crazy cavia's / scenario Laurent Dufreney",
-    "size": 100,
-    "children": [
+    "title": "Crazy cavia's / scenario Laurent Dufreney",
+    "illustrator": "#Miss# Prickly\"",
+    "otherAuthors": [
       {
-        "name": "authors",
-        "children": [
-          {
-            "name": "illustrator",
-            "size": 75,
-            "children": [
-              {
-                "name": "#Miss# Prickly\""
-              }
-            ]
-          },
-          {
-            "name": "other authors",
-            "size": 75,
-            "children": [
-              {
-                "name": [
-                  {
-                    "author": "Laurent Dufreney"
-                  },
-                  {
-                    "author": "Magali Paillat"
-                  },
-                  {
-                    "author": "Dieter van Tilburgh"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "author": "Laurent Dufreney"
       },
       {
-        "name": "meta",
-        "size": 75,
-        "children": [
-          {
-            "name": "subject",
-            "size": 25,
-            "children": [
-              {
-                "name": "Cavia's"
-              }
-            ]
-          },
-          {
-            "name": "genres",
-            "size": 50,
-            "children": [
-              {
-                "name": [
-                  {
-                    "genre": "Humor"
-                  },
-                  {
-                    "genre": "Stripverhaal"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "author": "Magali Paillat"
       },
       {
-        "name": "languages",
-        "size": 50,
-        "children": [
-          {
-            "name": "language",
-            "size": 25,
-            "children": [
-              {
-                "name": "dut"
-              }
-            ]
-          },
-          {
-            "name": "original language",
-            "size": 25,
-            "children": [
-              {
-                "name": "fre"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "publication",
-        "size": 75,
-        "children": [
-          {
-            "name": "publisher",
-            "size": 25,
-            "children": [
-              {
-                "name": "Silvester"
-              }
-            ]
-          },
-          {
-            "name": "place",
-            "size": 25,
-            "children": [
-              {
-                "name": "'s-Hertogenbosch"
-              }
-            ]
-          },
-          {
-            "name": "year",
-            "size": 25,
-            "children": [
-              {
-                "name": "2018"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "pages",
-        "size": 25,
-        "children": [
-          {
-            "name": "40 pagina's: gekleurde illustraties ; 29 cm"
-          }
-        ]
+        "author": "Dieter van Tilburgh"
       }
-    ]
+    ],
+    "subject": "Cavia's",
+    "genres": [
+      {
+        "genre": "Humor"
+      },
+      {
+        "genre": "Stripverhaal"
+      }
+    ],
+    "language": "dut",
+    "originalLanguage": "fre",
+    "publisher": "Silvester",
+    "place": "'s-Hertogenbosch",
+    "year": "2018",
+    "totalPages": 40
   },
   {
-    "name": "Eerste repressie / scenario Dugomier",
-    "size": 100,
-    "children": [
+    "title": "Eerste repressie / scenario Dugomier",
+    "illustrator": "Ers",
+    "otherAuthors": [
       {
-        "name": "authors",
-        "children": [
-          {
-            "name": "illustrator",
-            "size": 75,
-            "children": [
-              {
-                "name": "Ers"
-              }
-            ]
-          },
-          {
-            "name": "other authors",
-            "size": 75,
-            "children": [
-              {
-                "name": [
-                  {
-                    "author": "... Dugomier"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "meta",
-        "size": 75,
-        "children": [
-          {
-            "name": "subject",
-            "size": 25,
-            "children": [
-              {
-                "name": "Verzet"
-              }
-            ]
-          },
-          {
-            "name": "genres",
-            "size": 50,
-            "children": [
-              {
-                "name": [
-                  {
-                    "genre": "Stripverhaal"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "languages",
-        "size": 50,
-        "children": [
-          {
-            "name": "language",
-            "size": 25,
-            "children": [
-              {
-                "name": "dut"
-              }
-            ]
-          },
-          {
-            "name": "original language",
-            "size": 25,
-            "children": [
-              {
-                "name": "fre"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "publication",
-        "size": 75,
-        "children": [
-          {
-            "name": "publisher",
-            "size": 25,
-            "children": [
-              {
-                "name": "Le Lombard"
-              }
-            ]
-          },
-          {
-            "name": "place",
-            "size": 25,
-            "children": [
-              {
-                "name": "Brussel"
-              }
-            ]
-          },
-          {
-            "name": "year",
-            "size": 25,
-            "children": [
-              {
-                "name": "2018"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "pages",
-        "size": 25,
-        "children": [
-          {
-            "name": "47 pagina's: gekleurde illustraties ; 29 cm"
-          }
-        ]
+        "author": "... Dugomier"
       }
-    ]
+    ],
+    "subject": "Verzet",
+    "genres": [
+      {
+        "genre": "Stripverhaal"
+      }
+    ],
+    "language": "dut",
+    "originalLanguage": "fre",
+    "publisher": "Le Lombard",
+    "place": "Brussel",
+    "year": "2018",
+    "totalPages": 47
   },
   {
-    "name": "SOS Snowbell / Willy Vandersteen",
-    "size": 100,
-    "children": [
+    "title": "SOS Snowbell / Willy Vandersteen",
+    "illustrator": "Morjaeu, Luc",
+    "otherAuthors": [
       {
-        "name": "authors",
-        "children": [
-          {
-            "name": "illustrator",
-            "size": 75,
-            "children": [
-              {
-                "name": "Morjaeu, Luc"
-              }
-            ]
-          },
-          {
-            "name": "other authors",
-            "size": 75,
-            "children": [
-              {
-                "name": [
-                  {
-                    "author": "Peter Van Gucht"
-                  },
-                  {
-                    "author": "Willy Vandersteen"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "author": "Peter Van Gucht"
       },
       {
-        "name": "meta",
-        "size": 75,
-        "children": [
-          {
-            "name": "subject",
-            "size": 25,
-            "children": [
-              {
-                "name": null
-              }
-            ]
-          },
-          {
-            "name": "genres",
-            "size": 50,
-            "children": [
-              {
-                "name": [
-                  {
-                    "genre": "Stripverhaal"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "languages",
-        "size": 50,
-        "children": [
-          {
-            "name": "language",
-            "size": 25,
-            "children": [
-              {
-                "name": "dut"
-              }
-            ]
-          },
-          {
-            "name": "original language",
-            "size": 25,
-            "children": [
-              {
-                "name": null
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "publication",
-        "size": 75,
-        "children": [
-          {
-            "name": "publisher",
-            "size": 25,
-            "children": [
-              {
-                "name": "Standaard Uitgeverij"
-              }
-            ]
-          },
-          {
-            "name": "place",
-            "size": 25,
-            "children": [
-              {
-                "name": "Antwerpen"
-              }
-            ]
-          },
-          {
-            "name": "year",
-            "size": 25,
-            "children": [
-              {
-                "name": "2018"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "pages",
-        "size": 25,
-        "children": [
-          {
-            "name": "48 ongenummerde pagina's: gekleurde illustraties ; 30 cm"
-          }
-        ]
+        "author": "Willy Vandersteen"
       }
-    ]
+    ],
+    "subject": null,
+    "genres": [
+      {
+        "genre": "Stripverhaal"
+      }
+    ],
+    "language": "dut",
+    "originalLanguage": null,
+    "publisher": "Standaard Uitgeverij",
+    "place": "Antwerpen",
+    "year": "2018",
+    "totalPages": 48
   },
   {
-    "name": "De Bff's gaan helemaal los! / scenario Christophe Cazenove",
-    "size": 100,
-    "children": [
+    "title": "De Bff's gaan helemaal los! / scenario Christophe Cazenove",
+    "illustrator": "Fenech, Philippe",
+    "otherAuthors": [
       {
-        "name": "authors",
-        "children": [
-          {
-            "name": "illustrator",
-            "size": 75,
-            "children": [
-              {
-                "name": "Fenech, Philippe"
-              }
-            ]
-          },
-          {
-            "name": "other authors",
-            "size": 75,
-            "children": [
-              {
-                "name": [
-                  {
-                    "author": "Christophe Cazenove"
-                  },
-                  {
-                    "author": "Camille"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "author": "Christophe Cazenove"
       },
       {
-        "name": "meta",
-        "size": 75,
-        "children": [
-          {
-            "name": "subject",
-            "size": 25,
-            "children": [
-              {
-                "name": null
-              }
-            ]
-          },
-          {
-            "name": "genres",
-            "size": 50,
-            "children": [
-              {
-                "name": [
-                  {
-                    "genre": "Humor"
-                  },
-                  {
-                    "genre": "Stripverhaal"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "languages",
-        "size": 50,
-        "children": [
-          {
-            "name": "language",
-            "size": 25,
-            "children": [
-              {
-                "name": "dut"
-              }
-            ]
-          },
-          {
-            "name": "original language",
-            "size": 25,
-            "children": [
-              {
-                "name": "fre"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "publication",
-        "size": 75,
-        "children": [
-          {
-            "name": "publisher",
-            "size": 25,
-            "children": [
-              {
-                "name": "Ballon"
-              }
-            ]
-          },
-          {
-            "name": "place",
-            "size": 25,
-            "children": [
-              {
-                "name": "Antwerpen"
-              }
-            ]
-          },
-          {
-            "name": "year",
-            "size": 25,
-            "children": [
-              {
-                "name": "2018"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "pages",
-        "size": 25,
-        "children": [
-          {
-            "name": "46 pagina's: gekleurde illustraties ; 29 cm"
-          }
-        ]
+        "author": "Camille"
       }
-    ]
+    ],
+    "subject": null,
+    "genres": [
+      {
+        "genre": "Humor"
+      },
+      {
+        "genre": "Stripverhaal"
+      }
+    ],
+    "language": "dut",
+    "originalLanguage": "fre",
+    "publisher": "Ballon",
+    "place": "Antwerpen",
+    "year": "2018",
+    "totalPages": 46
   },
   {
-    "name": "Pinokkio / adaptatie David Chauvel",
-    "size": 100,
-    "children": [
+    "title": "Pinokkio / adaptatie David Chauvel",
+    "illustrator": "McBurnie, Tim",
+    "otherAuthors": [
       {
-        "name": "authors",
-        "children": [
-          {
-            "name": "illustrator",
-            "size": 75,
-            "children": [
-              {
-                "name": "McBurnie, Tim"
-              }
-            ]
-          },
-          {
-            "name": "other authors",
-            "size": 75,
-            "children": [
-              {
-                "name": [
-                  {
-                    "author": "David Chauvel"
-                  },
-                  {
-                    "author": "Carlo Collodi"
-                  },
-                  {
-                    "author": "Mariella Manfré"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "author": "David Chauvel"
       },
       {
-        "name": "meta",
-        "size": 75,
-        "children": [
-          {
-            "name": "subject",
-            "size": 25,
-            "children": [
-              {
-                "name": null
-              }
-            ]
-          },
-          {
-            "name": "genres",
-            "size": 50,
-            "children": [
-              {
-                "name": [
-                  {
-                    "genre": "Sprookjes"
-                  },
-                  {
-                    "genre": "Stripverhaal"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "author": "Carlo Collodi"
       },
       {
-        "name": "languages",
-        "size": 50,
-        "children": [
-          {
-            "name": "language",
-            "size": 25,
-            "children": [
-              {
-                "name": "dut"
-              }
-            ]
-          },
-          {
-            "name": "original language",
-            "size": 25,
-            "children": [
-              {
-                "name": "fre"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "publication",
-        "size": 75,
-        "children": [
-          {
-            "name": "publisher",
-            "size": 25,
-            "children": [
-              {
-                "name": "Silvester"
-              }
-            ]
-          },
-          {
-            "name": "place",
-            "size": 25,
-            "children": [
-              {
-                "name": "'s-Hertogenbosch"
-              }
-            ]
-          },
-          {
-            "name": "year",
-            "size": 25,
-            "children": [
-              {
-                "name": "2018"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "pages",
-        "size": 25,
-        "children": [
-          {
-            "name": "79 pagina's: gekleurde illustraties ; 29 cm"
-          }
-        ]
+        "author": "Mariella Manfré"
       }
-    ]
+    ],
+    "subject": null,
+    "genres": [
+      {
+        "genre": "Sprookjes"
+      },
+      {
+        "genre": "Stripverhaal"
+      }
+    ],
+    "language": "dut",
+    "originalLanguage": "fre",
+    "publisher": "Silvester",
+    "place": "'s-Hertogenbosch",
+    "year": "2018",
+    "totalPages": 79
   },
   {
-    "name": "De spannendste avonturen van Donald Duck Deel 17,  / hoofdredactie: Joan Lommen ; redactie: Jos Beekman, Jetty Koster (chef), Lotte Roep, Simone Ruitenbeek, Bas Schuddeboom, Jim van der Weele ; tekenafdeling: Frans Hasselaar (chef), Michel Nadorp, Jan-Roman Pikula",
-    "size": 100,
-    "children": [
+    "title": "De spannendste avonturen van Donald Duck Deel 17,  / hoofdredactie: Joan Lommen ; redactie: Jos Beekman, Jetty Koster (chef), Lotte Roep, Simone Ruitenbeek, Bas Schuddeboom, Jim van der Weele ; tekenafdeling: Frans Hasselaar (chef), Michel Nadorp, Jan-Roman Pikula",
+    "illustrator": "Hasselaar, Frans",
+    "otherAuthors": [
       {
-        "name": "authors",
-        "children": [
-          {
-            "name": "illustrator",
-            "size": 75,
-            "children": [
-              {
-                "name": "Hasselaar, Frans"
-              }
-            ]
-          },
-          {
-            "name": "other authors",
-            "size": 75,
-            "children": [
-              {
-                "name": [
-                  {
-                    "author": "Michel Nadorp"
-                  },
-                  {
-                    "author": "Jan-Roman Pikula"
-                  },
-                  {
-                    "author": "Joan Lommen"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "author": "Michel Nadorp"
       },
       {
-        "name": "meta",
-        "size": 75,
-        "children": [
-          {
-            "name": "subject",
-            "size": 25,
-            "children": [
-              {
-                "name": null
-              }
-            ]
-          },
-          {
-            "name": "genres",
-            "size": 50,
-            "children": [
-              {
-                "name": [
-                  {
-                    "genre": "Stripverhaal"
-                  },
-                  {
-                    "genre": "Verhalenbundel"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "author": "Jan-Roman Pikula"
       },
       {
-        "name": "languages",
-        "size": 50,
-        "children": [
-          {
-            "name": "language",
-            "size": 25,
-            "children": [
-              {
-                "name": "dut"
-              }
-            ]
-          },
-          {
-            "name": "original language",
-            "size": 25,
-            "children": [
-              {
-                "name": "eng"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "publication",
-        "size": 75,
-        "children": [
-          {
-            "name": "publisher",
-            "size": 25,
-            "children": [
-              {}
-            ]
-          },
-          {
-            "name": "place",
-            "size": 25,
-            "children": [
-              {
-                "name": "Hoofddorp"
-              }
-            ]
-          },
-          {
-            "name": "year",
-            "size": 25,
-            "children": [
-              {
-                "name": "2018"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "pages",
-        "size": 25,
-        "children": [
-          {
-            "name": "96 pagina's: gekleurde illustraties ; 27 cm"
-          }
-        ]
+        "author": "Joan Lommen"
       }
-    ]
+    ],
+    "subject": null,
+    "genres": [
+      {
+        "genre": "Stripverhaal"
+      },
+      {
+        "genre": "Verhalenbundel"
+      }
+    ],
+    "language": "dut",
+    "originalLanguage": "eng",
+    "place": "Hoofddorp",
+    "year": "2018",
+    "totalPages": 96
   },
   {
-    "name": "Een dag van stilte / Derib+ Job+ Chamblain",
-    "size": 100,
-    "children": [
+    "title": "Een dag van stilte / Derib+ Job+ Chamblain",
+    "illustrator": "Derib",
+    "otherAuthors": [
       {
-        "name": "authors",
-        "children": [
-          {
-            "name": "illustrator",
-            "size": 75,
-            "children": [
-              {
-                "name": "Derib"
-              }
-            ]
-          },
-          {
-            "name": "other authors",
-            "size": 75,
-            "children": [
-              {
-                "name": [
-                  {
-                    "author": "Job"
-                  },
-                  {
-                    "author": "... Chamblain"
-                  },
-                  {
-                    "author": "Rebekah Paulovich"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "author": "Job"
       },
       {
-        "name": "meta",
-        "size": 75,
-        "children": [
-          {
-            "name": "subject",
-            "size": 25,
-            "children": [
-              {
-                "name": "Indianen"
-              }
-            ]
-          },
-          {
-            "name": "genres",
-            "size": 50,
-            "children": [
-              {
-                "name": [
-                  {
-                    "genre": "Stripverhaal"
-                  },
-                  {
-                    "genre": "Western"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "author": "... Chamblain"
       },
       {
-        "name": "languages",
-        "size": 50,
-        "children": [
-          {
-            "name": "language",
-            "size": 25,
-            "children": [
-              {
-                "name": "dut"
-              }
-            ]
-          },
-          {
-            "name": "original language",
-            "size": 25,
-            "children": [
-              {
-                "name": "fre"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "publication",
-        "size": 75,
-        "children": [
-          {
-            "name": "publisher",
-            "size": 25,
-            "children": [
-              {
-                "name": "Le Lombard"
-              }
-            ]
-          },
-          {
-            "name": "place",
-            "size": 25,
-            "children": [
-              {
-                "name": "Brussel"
-              }
-            ]
-          },
-          {
-            "name": "year",
-            "size": 25,
-            "children": [
-              {
-                "name": "2018"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "pages",
-        "size": 25,
-        "children": [
-          {
-            "name": "45 pagina's: gekleurde illustraties ; 29 cm"
-          }
-        ]
+        "author": "Rebekah Paulovich"
       }
-    ]
+    ],
+    "subject": "Indianen",
+    "genres": [
+      {
+        "genre": "Stripverhaal"
+      },
+      {
+        "genre": "Western"
+      }
+    ],
+    "language": "dut",
+    "originalLanguage": "fre",
+    "publisher": "Le Lombard",
+    "place": "Brussel",
+    "year": "2018",
+    "totalPages": 45
   }
 ]

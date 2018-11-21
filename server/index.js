@@ -37,109 +37,17 @@ client.getPages(search).then(response => { return response.data
   // We added some if-statements to check if the filter object that Gijs initiates, exists. I can't use this filter object cuz i need my info array to contain all my data objects. If i use the filter-object, it doesn't do that.
   const data = response.map(book => (
     {
-      name: book.titles && book.titles[0] && book.titles[0].title && book.titles[0].title[0] ? book.titles[0].title[0]._ : null,
-      children: [
-        {
-          name: "authors",
-          children: [
-            {
-              name: "illustrator",
-              children: [
-                {
-                  name: book.authors && book.authors[0] && book.authors[0]["main-author"] && book.authors[0]["main-author"][0] ? book.authors[0]["main-author"][0]._ : null,
-                }
-              ]
-            },
-            {
-              name: "other authors",
-              children: [
-                {
-                  name: book.authors && book.authors[0] && book.authors[0].author ? book.authors[0].author.map(author => ({author: author._})) : null,
-                }
-              ]
-            }
-          ]
-        },
-        {
-          name: "meta",
-          children: [
-            {
-              name: "subject",
-              children: [
-                {
-                  name: book.subjects && book.subjects[0] && book.subjects[0]["topical-subject"] && book.subjects[0]["topical-subject"][0] ? book.subjects[0]["topical-subject"][0]._ : null
-                }
-              ]
-            },
-            {
-              name: "genres",
-              children: [
-                {
-                  name: book.genres && book.genres[0] && book.genres[0].genre ? book.genres[0].genre.map(genre => ({genre: genre._})) : null
-                }
-              ]
-            }
-          ]
-        },
-        {
-          name: "languages",
-          children: [
-            {
-              name: "language",
-              children: [
-                {
-                  name: book.languages && book.languages[0] && book.languages[0].language && book.languages[0].language[0] ? book.languages[0].language[0]['_'] : null
-                }
-              ]
-            },
-            {
-              name: "original language",
-              children: [
-                {
-                  name: book.languages && book.languages[0] && book.languages[0]['original-language'] ? book.languages[0]['original-language'][0]['_'] : null
-                }
-              ]
-            }
-          ]
-        },
-        {
-          name: "publication",
-          children: [
-            {
-              name: "publisher",
-              children: [
-                {
-                  name: book.publication && book.publication[0] && book.publication[0].publishers && book.publication[0].publishers[0] && book.publication[0].publishers[0].publisher && book.publication[0].publishers[0].publisher[0] ? book.publication[0].publishers[0].publisher[0]._ : null
-                }
-              ]
-            },
-            {
-              name: "place",
-              children: [
-                {
-                  name: book.publication && book.publication[0] && book.publication[0].publishers && book.publication[0].publishers[0] && book.publication[0].publishers[0].publisher && book.publication[0].publishers[0].publisher[0] ? book.publication[0].publishers[0].publisher[0].$.place : null
-                }
-              ]
-            },
-            {
-              name: "year",
-              children: [
-                {
-                  name: book.publication && book.publication[0] && book.publication[0].year && book.publication[0].year[0]['_'] ? book.publication[0].year[0]['_'] : null
-                }
-              ]
-            }
-          ]
-        },
-        {
-          name: "pages",
-          children: [
-            {
-              name: book.description && book.description[0] && book.description[0]["physical-description"] && book.description[0]["physical-description"][0] ?  book.description[0]["physical-description"][0]._ : null
-            }
-          ]
-        }
-      ]
+      title: book.titles && book.titles[0] && book.titles[0].title && book.titles[0].title[0] ? book.titles[0].title[0]._ : null,
+      illustrator: book.authors && book.authors[0] && book.authors[0]["main-author"] && book.authors[0]["main-author"][0] ? book.authors[0]["main-author"][0]._ : null,
+      otherAuthors: book.authors && book.authors[0] && book.authors[0].author ? book.authors[0].author.map(author => ({author: author._})) : null,
+      subject: book.subjects && book.subjects[0] && book.subjects[0]["topical-subject"] && book.subjects[0]["topical-subject"][0] ? book.subjects[0]["topical-subject"][0]._ : null,
+      genres: book.genres && book.genres[0] && book.genres[0].genre ? book.genres[0].genre.map(genre => ({genre: genre._})) : null,
+      language: book.languages && book.languages[0] && book.languages[0].language && book.languages[0].language[0] ? book.languages[0].language[0]['_'] : null,
+      originalLanguage: book.languages && book.languages[0] && book.languages[0]['original-language'] ? book.languages[0]['original-language'][0]['_'] : null,
+      publisher: book.publication[0] && book.publication[0].publishers[0] && book.publication[0].publishers[0].publisher[0] ? book.publication[0].publishers[0].publisher[0]._ : null,
+      place: book.publication && book.publication[0] && book.publication[0].publishers && book.publication[0].publishers[0] && book.publication[0].publishers[0].publisher && book.publication[0].publishers[0].publisher[0] ? book.publication[0].publishers[0].publisher[0].$.place : null,
+      year: book.publication && book.publication[0] && book.publication[0].year && book.publication[0].year[0]['_'] ? book.publication[0].year[0]['_'] : null,
+      totalPages: response.description && response.description[0] && book.description[0]["physical-description"] && book.description[0]["physical-description"][0] ? book.description[0]["physical-description"][0]._ : null
     }
   ))
   // writing data to json file
@@ -147,3 +55,107 @@ client.getPages(search).then(response => { return response.data
     console.log('created data.json')
   })
 }).catch(err => console.log(err))
+
+// name: book.titles && book.titles[0] && book.titles[0].title && book.titles[0].title[0] ? book.titles[0].title[0]._ : null,
+// children: [
+//   {
+//     name: "authors",
+//     children: [
+//       {
+//         name: "illustrator",
+//         children: [
+//           {
+//             name: book.authors && book.authors[0] && book.authors[0]["main-author"] && book.authors[0]["main-author"][0] ? book.authors[0]["main-author"][0]._ : null,
+//           }
+//         ]
+//       },
+//       {
+//         name: "other authors",
+//         children: [
+//           {
+//             name: book.authors && book.authors[0] && book.authors[0].author ? book.authors[0].author.map(author => ({author: author._})) : null,
+//           }
+//         ]
+//       }
+//     ]
+//   },
+//   {
+//     name: "meta",
+//     children: [
+//       {
+//         name: "subject",
+//         children: [
+//           {
+//             name: book.subjects && book.subjects[0] && book.subjects[0]["topical-subject"] && book.subjects[0]["topical-subject"][0] ? book.subjects[0]["topical-subject"][0]._ : null
+//           }
+//         ]
+//       },
+//       {
+//         name: "genres",
+//         children: [
+//           {
+//             name: book.genres && book.genres[0] && book.genres[0].genre ? book.genres[0].genre.map(genre => ({genre: genre._})) : null
+//           }
+//         ]
+//       }
+//     ]
+//   },
+//   {
+//     name: "languages",
+//     children: [
+//       {
+//         name: "language",
+//         children: [
+//           {
+//             name: book.languages && book.languages[0] && book.languages[0].language && book.languages[0].language[0] ? book.languages[0].language[0]['_'] : null
+//           }
+//         ]
+//       },
+//       {
+//         name: "original language",
+//         children: [
+//           {
+//             name: book.languages && book.languages[0] && book.languages[0]['original-language'] ? book.languages[0]['original-language'][0]['_'] : null
+//           }
+//         ]
+//       }
+//     ]
+//   },
+//   {
+//     name: "publication",
+//     children: [
+//       {
+//         name: "publisher",
+//         children: [
+//           {
+//             name: book.publication && book.publication[0] && book.publication[0].publishers && book.publication[0].publishers[0] && book.publication[0].publishers[0].publisher && book.publication[0].publishers[0].publisher[0] ? book.publication[0].publishers[0].publisher[0]._ : null
+//           }
+//         ]
+//       },
+//       {
+//         name: "place",
+//         children: [
+//           {
+//             name: book.publication && book.publication[0] && book.publication[0].publishers && book.publication[0].publishers[0] && book.publication[0].publishers[0].publisher && book.publication[0].publishers[0].publisher[0] ? book.publication[0].publishers[0].publisher[0].$.place : null
+//           }
+//         ]
+//       },
+//       {
+//         name: "year",
+//         children: [
+//           {
+//             name: book.publication && book.publication[0] && book.publication[0].year && book.publication[0].year[0]['_'] ? book.publication[0].year[0]['_'] : null
+//           }
+//         ]
+//       }
+//     ]
+//   },
+//   {
+//     name: "pages",
+//     children: [
+//       {
+//         name: book.description && book.description[0] && book.description[0]["physical-description"] && book.description[0]["physical-description"][0] ?  book.description[0]["physical-description"][0]._ : null
+//       }
+//     ]
+//   }
+// ]
