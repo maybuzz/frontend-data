@@ -13,6 +13,8 @@
   * [Resources](#resources)
 * [License](#license)
 
+![datavis](datavis.png)
+
 ## Installation
 
 

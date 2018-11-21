@@ -30,33 +30,51 @@ d3.json('/data.json').then(result => {
       }))
 
       const data = sortByLanguage.map(language => {
-        const bySubject = d3.nest()
-          .key(book => book.subject)
-          .entries(language.children)
-          .map(subject => {
-            return {
-              name: subject.key,
-              children: subject.values.map(book => ({...book}))
-            }
-          })
+    const bySubject = d3.nest()
+      .key(book => book.subject)
+      .entries(language.children)
+      .map(subject => {
         return {
-          name: language.name,
-          children: bySubject
+          name: subject.key,
+          children: subject.values.map(book => ({...book}))
         }
-      })[0]
+      })
+    return {
+      name: language.name,
+      children: bySubject
+    }
+  })[0]
 
+  // const data = sortByLanguage.map(language => {
+    // const bySubject = d3.nest()
+    //   // .key(book => book.originalLanguage)
+    //   .key(book => book.subject)
+    //   .entries(language.children)
+    //   .map(subject => {
+    //     return {
+    //    name: subject.key,
+    //    children: subject.values.map(book => ({...book}))
+    //  }
+          //   return {
+          //     name: book.subject == 'overig' ? [book].map(item => item.title) : book.subject,
+          //     children: book.subject !== 'overig' ? [book] : [book].map(item => ({
+          //       name: item.title,
+          //       children: item
+          //     }))
+          // }
+  //       })
+  //     }})
   //   return {
-  //     name: book.subject == 'overig' ? [book].map(item => item.title) : book.subject,
-  //     children: book.subject !== 'overig' ? [book] : [book].map(item => ({
-  //       name: item.title,
-  //       children: item
-  //     }))
-  // }
+  //     name: language.name,
+  //     children: bySubject,
+  //   }
+  // })[0]
 
 // setup circle pack
 // using my nested data with Folkert-Jan vd Pol
 // finished circle pack setup + fixed hierarchy with Titus Wormer
   const root = d3.hierarchy(data)
+    // .sum(d =>  d.totalPages > 0 ? d.totalPages : d.children.totalPages / 2)
     .sum(d =>  d.totalPages)
     .sort((a, b) => b.value - a.value);
 
