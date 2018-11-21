@@ -2,16 +2,16 @@
 
 ## Table of contents
 
-- [Installation](#installation)
-- [Introduction](#introduction)    
-- [Process](#process)   
-- [Data](#data)    
-  - [API](#API)    
-  - [Code](#code)   
-- [To do](#to do)
-- [Credits](#credits)
-  - [Resources](#resources)
-- [License](#license)
+* [Installation](#installation)
+* [Introduction](#introduction)    
+* [Process](#process)   
+* [Data](#data)    
+  * [API](#API)    
+  * [Code](#code)   
+* [To do](#todo)
+* [Credits](#credits)
+  * [Resources](#resources)
+* [License](#license)
 
 ## Installation
 
@@ -21,32 +21,32 @@
 
 I made a datavisualisation about comic books in the public library of Amsterdam (OBA). I used the `OBA API` to collect the data. Read more about the data and code in `Data`
 
-
 ## Process
+
+I used `D3` and everything I learned with functional programming to create a datavisualisation. I  
 
 Over d3 en hoe ik mn data in d3 heb omgezet tot cirkeltjes
 
 stukje code ?
 
-I used `D3` and everything I learned with functional programming to create a datavisualisation. I  
-
 ## Data
 
-functies en andere dingen die ik heb geleerd dit project
-- `.map` ->
-- `.trim()` ->
-- `Number()` ->
+* `.map` ->
+* `[...].substring(0, ...)` -> use bookTitle.substring(0, ...) to get the title string, also used to get the totalPages string
+* `....indexOf('[...]')` -> use .indexOf('/') to cut the string at the '/'
+* `.trim()` -> use to cut spaces off both sides, used to convert the title and totalPages
+* `Number()` -> used to covert the totalPages string to a number
 
 
 ### API
 
-Create a `.env` file to store the keys
+Create a `.env` file to store the keys, your file should look like this;
 ```
 PUBLIC=1e19898c87464e239192c8bfe422f280
 SECRET=4289fec4e962a33118340c888699438d
 ```
 
-I use `@gijslaarman/oba-scraper`, use npm install to install the node_modules and require the API in your index.js file. To create a connection to the API you need the PUBLIC key you stored in your .env file.
+Use `npm install` to install `@gijslaarman/oba-scraper`, require the API in your index.js file. To create a connection to the API you need the `PUBLIC key` you stored in your `.env` file.
 ```js
 const api = require("@gijslaarman/oba-scraper")
 const client = new api({
@@ -54,7 +54,10 @@ const client = new api({
 })
 ```
 
-I tried using several API's during this project. I eventually stuck with this one because Gijs made it possible to get all the pages (20 books p page) at once. In this piece of code you can see the structure Gijs created `endpoint` to define the endpoint used in the API, `query` to define the things you want to look for, and `pages` to define the number of pages you want to get.
+ * `endpoint` -> define the endpoint used in the API
+ * `query` -> define the things you want to look for
+ * `pages` -> define the number of pages you want to get
+
 ```js
 const search = {
     endpoint: 'search',
@@ -74,8 +77,8 @@ const search = {
 ```
 
 ### Code
-- `title`, `illustrator`, `otherAuthors`, `subject`, `pages` etc. -> Labels for collected data
--
+* `title`, `illustrator`, `otherAuthors`, `subject`, `pages` etc. -> Labels for collected data
+*
 
 This is a piece of code from `index.js`. This is where collect my data from the API.
 ```js
@@ -112,8 +115,6 @@ const data = response.map(book => (
 
 ## Credits
 
-github handles van al mijn lieve helpertjes
-
 Titus Wormer `@wooorm`    
 Folkert-Jan vd Pol `@FJvdP`    
 Dennis Wegereef `@Denniswegereef`    
@@ -128,9 +129,10 @@ Gijs Laarman `@gijslaarman`
 * [D3 layouts](https://d3indepth.com/layouts/)
 * [D3 hierarchy](https://github.com/d3/d3-hierarchy )   
 * [Youtube tutorial](https://www.youtube.com/watch?v=Z0PpaI0UlkE)  
-* [Circle packing example](https://bl.ocks.org/mbostock/7607535)
+* [Circle packing example by Mike Bostock](https://bl.ocks.org/mbostock/7607535)
 * [Observablehq  example](https://beta.observablehq.com/@mbostock/d3-circle-packing)   
 * [Gissa oba scraper](https://www.npmjs.com/package/@gijslaarman/oba-scraper)   
 * [Daniel vd Velde README.md](https://github.com/DanielvandeVelde/functional-programming#cheatsheet)
+* [README.md example by Titus](https://github.com/wooorm/dictionary)
 
 ## License
