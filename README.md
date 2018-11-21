@@ -28,9 +28,10 @@ Over d3 en hoe ik mn data in d3 heb omgezet tot cirkeltjes
 
 stukje code ?
 
-I used `D3` and everything I learned with functional programming to create a datavisualisation.
+I used `D3` and everything I learned with functional programming to create a datavisualisation. I  
 
 ## Data
+
 functies en andere dingen die ik heb geleerd dit project
 - `.map` ->
 - `.trim()` ->
@@ -38,54 +39,61 @@ functies en andere dingen die ik heb geleerd dit project
 
 
 ### API
-hoe ik communiceer met de api, hoe ik 100 keer van api ding verander en waarom ik het nu heb hoe ik het heb
 
-plus, stukje dat ik in de gissa node module heb aan moeten passen
+Create a `.env` file to store the keys
+```
+PUBLIC=1e19898c87464e239192c8bfe422f280
+SECRET=4289fec4e962a33118340c888699438d
+```
 
+I use `@gijslaarman/oba-scraper`, use npm install to install the node_modules and require the API in your index.js file. To create a connection to the API you need the PUBLIC key you stored in your .env file.
+```js
+const api = require("@gijslaarman/oba-scraper")
+const client = new api({
+    publicKey: process.env.PUBLIC
+})
+```
+
+I tried using several API's during this project. I eventually stuck with this one because Gijs made it possible to get all the pages (20 books p page) at once. In this piece of code you can see the structure Gijs created `endpoint` to define the endpoint used in the API, `query` to define the things you want to look for, and `pages` to define the number of pages you want to get.
+```js
+const search = {
+    endpoint: 'search',
+    query: {
+        q: 'format:book',
+        facet: 'genre(stripverhaal)',
+        sort: 'year',
+        librarian: true,
+        refine: true
+    },
+    pages: {
+        page: 1,
+        pagesize: 20,
+        maxpages: 1
+    },
+}
+```
 
 ### Code
-- `title`, `authors`, `languages`, `publication`, `pages` -> These labels kind of speak for themselves...
-- `meta` -> This label includes the `subject` and `genre(s)`. I didn't really know what else to call it.
+- `title`, `illustrator`, `otherAuthors`, `subject`, `pages` etc. -> Labels for collected data
+-
 
-This is a piece of code from `index.js`. This is where I define my data structure using
+This is a piece of code from `index.js`. This is where collect my data from the API.
 ```js
-{
-  title: book.titles && book.titles[0] && book.titles[0].title && book.titles[0].title[0] ? book.titles[0].title[0]._ : null,
-  info: [
-    {
-      // main-author & other authors
-      // separate objects to generate separate circles
-      authors: [
-        {
-          illustrator: book.authors && book.authors[0] && book.authors[0]["main-author"] && book.authors[0]["main-author"][0] ? book.authors[0]["main-author"][0]._ : null
-        },
-        {
-          authors: book.authors && book.authors[0] && book.authors[0].author ? book.authors[0].author.map(author => ({author: author._})) : null
-        }
-      ],
-      meta: [
-        {
-          subject: book.subjects && book.subjects[0] && book.subjects[0]["topical-subject"] && book.subjects[0]["topical-subject"][0] ? book.subjects[0]["topical-subject"][0]._ : null
-        },
-        {
-          genres: book.genres && book.genres[0] && book.genres[0].genre ? book.genres[0].genre.map(genre => ({genre: genre._})) : null
-        }
-      ],
-      publication: [
-        {
-          publisher: book.publication && book.publication[0] && book.publication[0].publishers && book.publication[0].publishers[0] && book.publication[0].publishers[0].publisher && book.publication[0].publishers[0].publisher[0] ? book.publication[0].publishers[0].publisher[0]._ : null
-        },
-        {
-          place: book.publication && book.publication[0] && book.publication[0].publishers && book.publication[0].publishers[0] && book.publication[0].publishers[0].publisher && book.publication[0].publishers[0].publisher[0] ? book.publication[0].publishers[0].publisher[0].$.place : null
-        },
-        {
-          year: book.publication && book.publication[0] && book.publication[0].year && book.publication[0].year[0]['_'] ? book.publication[0].year[0]['_'] : null
-        }
-      ],
-      pages: book.description && book.description[0] && book.description[0]["physical-description"] && book.description[0]["physical-description"][0] ?  book.description[0]["physical-description"][0]._ : null
-    }
-  ]
-}
+const data = response.map(book => (
+  {
+    title: book.titles && book.titles[0] && book.titles[0].title && book.titles[0].title[0] ? book.titles[0].title[0]._ : null,
+    illustrator: book.authors && book.authors[0] && book.authors[0]["main-author"] && book.authors[0]["main-author"][0] ? book.authors[0]["main-author"][0]._ : null,
+    otherAuthors: book.authors && book.authors[0] && book.authors[0].author ? book.authors[0].author.map(author => ({author: author._})) : null,
+    subject: book.subjects && book.subjects[0] && book.subjects[0]["topical-subject"] && book.subjects[0]["topical-subject"][0] ? book.subjects[0]["topical-subject"][0]._ : null,
+    genres: book.genres && book.genres[0] && book.genres[0].genre ? book.genres[0].genre.map(genre => ({genre: genre._})) : null,
+    language: book.languages && book.languages[0] && book.languages[0].language && book.languages[0].language[0] ? book.languages[0].language[0]['_'] : null,
+    originalLanguage: book.languages && book.languages[0] && book.languages[0]['original-language'] ? book.languages[0]['original-language'][0]['_'] : null,
+    publisher: book.publication[0] && book.publication[0].publishers[0] && book.publication[0].publishers[0].publisher[0] ? book.publication[0].publishers[0].publisher[0]._ : null,
+    place: book.publication && book.publication[0] && book.publication[0].publishers && book.publication[0].publishers[0] && book.publication[0].publishers[0].publisher && book.publication[0].publishers[0].publisher[0] ? book.publication[0].publishers[0].publisher[0].$.place : null,
+    year: book.publication && book.publication[0] && book.publication[0].year && book.publication[0].year[0]['_'] ? book.publication[0].year[0]['_'] : null,
+    totalPages: response.description && response.description[0] && book.description[0]["physical-description"] && book.description[0]["physical-description"][0] ? book.description[0]["physical-description"][0]._ : null
+  }
+))
 ```
 
 ## To do
@@ -108,6 +116,7 @@ github handles van al mijn lieve helpertjes
 
 Titus Wormer `@wooorm`    
 Folkert-Jan vd Pol `@FJvdP`    
+Dennis Wegereef `@Denniswegereef`    
 Gijs Laarman `@gijslaarman`
 
 ### Resources
@@ -115,8 +124,13 @@ Gijs Laarman `@gijslaarman`
 * [Datavizcatalogue](https://datavizcatalogue.com/)    
   * [Circle packing method](https://datavizcatalogue.com/methods/circle_packing.html)   
   * [Tree map method](https://datavizcatalogue.com/methods/treemap.html)    
-* [Circle packing example](https://bl.ocks.org/mbostock/7607535)    
-* [D3 layouts](https://d3indepth.com/layouts/)    
-* [Gissa oba scraper](https://www.npmjs.com/package/@gijslaarman/oba-scraper)    
+* [D3 nest](http://learnjsdata.com/group_data.html)
+* [D3 layouts](https://d3indepth.com/layouts/)
+* [D3 hierarchy](https://github.com/d3/d3-hierarchy )   
+* [Youtube tutorial](https://www.youtube.com/watch?v=Z0PpaI0UlkE)  
+* [Circle packing example](https://bl.ocks.org/mbostock/7607535)
+* [Observablehq  example](https://beta.observablehq.com/@mbostock/d3-circle-packing)   
+* [Gissa oba scraper](https://www.npmjs.com/package/@gijslaarman/oba-scraper)   
+* [Daniel vd Velde README.md](https://github.com/DanielvandeVelde/functional-programming#cheatsheet)
 
 ## License
