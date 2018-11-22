@@ -1,10 +1,4 @@
 'use strict'
-// verdelen op taal
-// taal onderverdelen op genres
-// boeken per genre laten zien
-
-// sortByLanguage en byGenre 'nesten'
-
 
 // used Mike Bostock's Zoomable Circle Pack example; https://bl.ocks.org/mbostock/7607535
 // Dennis Wegereef @Denniswegereef, Folkert-Jan vd Pol @FjvdP and Titus Wormer @wooorm helped me setup this datavis
@@ -31,57 +25,66 @@ d3.json('/data.json').then(result => {
     .entries(result)
     .map(language => ({name: language.key, children: language.values}))
 
-    console.log(sortByLanguage)
-
-    const data = sortByLanguage.map(language => {
-    // const byGenre = d3.nest()
-    //   .key(book => book.genres)
-    //   .entries(language.children)
-    //   // .entries(result)
-    //   .map(genre => {
-    //     return {
-    //       name: genre.key,
-    //       children: genre.values.map(book => ({...book}))
-    //     }
-    //   })
-    //   console.log(byGenre);
-    return { name: language.name, children: sortByLanguage }
-  })[0]
-
   // const data = sortByLanguage.map(language => {
+  //     const byGenre = d3.nest()
+  //       // .key(book => book.genres)
+  //       .key(book => book.genres)
+  //       .entries(result)
+  //       .map(data => ({
+  //         name: language.name,
+  //         children: data
+  //       }))
+  //       // .entries(result)
+  //     return { name: language.name, children: byGenre }
+  // })[0]
+  // const books = goodData.map(books => {
+  //   const byBooks = d3.nest()
+  //     .key()
+  // })
+  // .map(genre => {
+  //   return {
+  //     name: genre.key,
+  //     children: genre.values.map(book => ({...book}))
+  //   }
+  // })
+
+  const dataLanguage = sortByLanguage.map(language => {
     // const bySubject = d3.nest()
     //   // .key(book => book.originalLanguage)
-    //   .key(book => book.subject)
-    //   .entries(language.children)
-    //   .map(subject => {
-    //     return {
-    //    name: subject.key,
-    //    children: subject.values.map(book => ({...book}))
-    //  }
-          //   return {
-          //     name: book.subject == 'overig' ? [book].map(item => item.title) : book.subject,
-          //     children: book.subject !== 'overig' ? [book] : [book].map(item => ({
-          //       name: item.title,
-          //       children: item
-          //     }))
-          // }
-  //       })
-  //     }})
-  //   return {
-  //     name: language.name,
-  //     children: bySubject,
-  //   }
-  // })[0]
+    //   .key(book => console.log(book.genres))
+    //   .entries(language)
+    //
+    //   console.log(language.children)
+    //
+    //   const newReturn = language.children.map(data => {
+    //     return { name: language.name, children: bySubject
+    //         // .map(item => ({
+    //         //   name: item.key,
+    //         //   children: item.values.map(book => ({
+    //         //     name: book.title,
+    //         //     children: book
+    //         //   }))
+    //         // }))
+    //     }})[0]
+        return {
+          name: language.key,
+          children: sortByLanguage
+        }
+  })[0]
+
+  const dataBooks = sortByLanguage.map(language => {
+        return {
+          name: language.key,
+          children: result
+        }
+  })[0]
 
 // setup circle pack
 // using my nested data with Folkert-Jan vd Pol
 // finished circle pack setup + fixed hierarchy with Titus Wormer
-  const root = d3.hierarchy(data)
-    // .sum(d =>  d.totalPages > 0 ? d.totalPages : d.children.totalPages / 2)
+  const root = d3.hierarchy(dataLanguage)
     .sum(d =>  d.totalPages)
     .sort((a, b) => b.value - a.value)
-
-// console.log('root: ', root);
 
   const pack = d3.pack()
     .size([diameter, diameter])
@@ -90,8 +93,6 @@ d3.json('/data.json').then(result => {
   let focus = root
   const nodes = pack(root).descendants()
   let view
-
- // console.log('data: ', nodes);
 
   const circle = g.selectAll('circle')
     .data(nodes)
@@ -106,7 +107,6 @@ d3.json('/data.json').then(result => {
     .enter().append('text')
       .attr('class', 'label')
       .style('font-size', function(d) { return Math.min(.2 * d.r, (.2 * d.r - 8) / this.getComputedTextLength() * 24) + 'px'})
-      .attr('dy', '.35em')
       .style('fill-opacity', function(d) { return d.parent === root ? 1 : 0; })
       .style('display', function(d) { return d.parent === root ? 'inline' : 'none'})
       .text(function(d) { return d.data.name || d.data.title})
@@ -114,7 +114,6 @@ d3.json('/data.json').then(result => {
   const node = g.selectAll('circle, text')
 
   svg.on('click', function() { zoom(root) })
-      // .style('background', color(-1))
 
   zoomTo([root.x, root.y, root.r * 2 + margin])
 
@@ -142,4 +141,13 @@ d3.json('/data.json').then(result => {
     node.attr('transform', function(d) { return 'translate(' + (d.x - v[0]) * k + ',' + (d.y - v[1]) * k + ')'})
     circle.attr('r', function(d) { return d.r * k})
   }
+
+  const button = d3.select('#button').append('button')
+    .text('Change data')
+    .on('click', function(){
+      console.log('clicked')
+    })
+
+}).catch(err => {
+  console.log(err)
 })

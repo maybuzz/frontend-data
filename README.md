@@ -10,7 +10,7 @@
 * [Data](#data)    
   * [API](#API)    
   * [Code](#code)   
-* [To do](#todo)
+* [Todo](#todo)
 * [Credits](#credits)
   * [Resources](#resources)
 * [License](#license)
@@ -25,13 +25,18 @@ I made a datavisualisation about comic books in the public library of Amsterdam 
 
 ## Process
 
-I used `D3` and everything I learned with functional programming to create a datavisualisation. The circle packing I made turned out to be a bit harder than I thought.
+I used `D3` and everything I learned with functional programming to create a data visualization. The circle packing I made turned out to be a bit harder than I thought.
 
 At first I thought I needed to structure my data in the server, but this was wrong. Now I just collect the data I need and add the structure in D3. This makes it possible to add a size value which is needed to calculate the depth of the 'bubble'. I'm using `d3.nest()` to structure the data. Because I need to go deeper into the bubbles every time, I need to nest inside my nest. This works; I am able to show genre-bubbles with my books inside.
 
 Now I need a new layer. I need my books to be inside the genre-bubbles INSIDE a language bubble. This way I can visualize genres inside (original) language, and show my books per genre. If this works I am able to add a filter, so the user can choose to either see books per genre per language or just books per language. Not very interesting, but it's the best I can do...
 
 I struggled a lot to get the bubbles working. Titus and Folkert helped me a lot and we eventually managed to get it to work. Now I'm struggling to get my data structure right... I haven't even gotten started on the interaction part...
+
+I tried nesting my genres into my original language. For some reason this is an impossible task... I am able to show my books per language, but when I try to add a new layer (genres) it's not working the way I want it too.
+
+Nesting
+I started the nesting process in `const sortByLanguage`. Usually a nest results in `keys` and `values`. I need a different structure, I need `names` and `children`. To get these, I need to `map` and change the keys and values to names and children. This structure is needed to create my circle packing.
 
 ## Data
 
@@ -104,13 +109,10 @@ const data = response.map(book => (
 ))
 ```
 
-## To do
+## Todo
 
 - [x] Write (english) README.md
 - [x] Fix `table-of-contents`
-- [ ] Write `Installation`, `API` and `Process`
-- [ ] Finish `Data`, `Code`, `Credits`, `Resources` and `License`
-- [ ] Fix code-snippet in `Code`
 - [x] Connect to API (functional-programming)
 - [x] Generate data, write to data.json
 - [x] Create `D3` data visualization (part of data)
@@ -118,6 +120,8 @@ const data = response.map(book => (
 - [ ] Update data visualization to complete dataset (+/- 7000 books)
 - [ ] Filter data, turn on and off
 - [ ] Clean up code, functional
+- [x] Add styling
+- [ ] Use `npm delve` to replace my massive checks in server/index.js
 
 ## Credits
 
