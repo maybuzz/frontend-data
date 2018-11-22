@@ -14,7 +14,10 @@
 
 ## Concept
 
-At first I thought I needed to structure my data in the server, but this was wrong. Now I just collect the data I need and add the structure in D3. This makes it possible to add a size value which is needed to calculate the depth of the 'bubble'. I'm using `d3.nest()` to structure the data. Because I need to go deeper into the bubbles every time, I need to nest inside my nest. This works; I am able to show genre-bubbles with my books inside.
+At first I thought I needed to structure my data in the server, but this was wrong. I managed to write code to collect the data  I should just collect the data I need and add the structure in D3 using `nest`. This makes it possible to add a size value which is needed to calculate the depth of the 'bubble'. 
+
+
+I'm using `d3.nest()` to structure the data. Because I need to go deeper into the bubbles every time, I need to nest inside my nest. This works; I am able to show genre-bubbles with my books inside.
 
 ![drawing](drawing.JPG)
 
