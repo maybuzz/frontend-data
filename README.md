@@ -1,4 +1,6 @@
-# frontend-data
+# Frontend-data
+
+![datavisje](datavizzz.png)
 
 ## Table of contents
 
@@ -13,8 +15,6 @@
   * [Resources](#resources)
 * [License](#license)
 
-![datavis](datavis.png)
-
 ## Installation
 
 
@@ -25,30 +25,33 @@ I made a datavisualisation about comic books in the public library of Amsterdam 
 
 ## Process
 
-I used `D3` and everything I learned with functional programming to create a datavisualisation. I  
+I used `D3` and everything I learned with functional programming to create a datavisualisation. The circle packing I made turned out to be a bit harder than I thought.
 
-Over d3 en hoe ik mn data in d3 heb omgezet tot cirkeltjes
+At first I thought I needed to structure my data in the server, but this was wrong. Now I just collect the data I need and add the structure in D3. This makes it possible to add a size value which is needed to calculate the depth of the 'bubble'. I'm using `d3.nest()` to structure the data. Because I need to go deeper into the bubbles every time, I need to nest inside my nest. This works; I am able to show genre-bubbles with my books inside.
 
-stukje code ?
+Now I need a new layer. I need my books to be inside the genre-bubbles INSIDE a language bubble. This way I can visualize genres inside (original) language, and show my books per genre. If this works I am able to add a filter, so the user can choose to either see books per genre per language or just books per language. Not very interesting, but it's the best I can do...
+
+I struggled a lot to get the bubbles working. Titus and Folkert helped me a lot and we eventually managed to get it to work. Now I'm struggling to get my data structure right... I haven't even gotten started on the interaction part...
 
 ## Data
 
+* `d3.nest()` -> used to structure my data in D3.
 * `.map` ->
-* `.substring(0, ...)` -> use bookTitle.substring(0, ...) to get the title string, also used to get the totalPages string
-* `.indexOf('[...]')` -> use .indexOf('/') to cut the string at the '/'
-* `.trim()` -> use to cut spaces off both sides, used to convert the title and totalPages
+* `.split('/')` -> use to cut the string at the '/'
+* `.trim()` -> use to cut spaces off both sides
 * `Number()` -> used to covert the totalPages string to a number
-
 
 ### API
 
 Create a `.env` file to store the keys, your file should look like this;
+
 ```
 PUBLIC=1e19898c87464e239192c8bfe422f280
 SECRET=4289fec4e962a33118340c888699438d
 ```
 
 Use `npm install` to install `@gijslaarman/oba-scraper`, require the API in your index.js file. To create a connection to the API you need the `PUBLIC key` you stored in your `.env` file.
+
 ```js
 const api = require("@gijslaarman/oba-scraper")
 const client = new api({
@@ -104,16 +107,17 @@ const data = response.map(book => (
 ## To do
 
 - [x] Write (english) README.md
-- [ ] Fix `table-of-contents`
+- [x] Fix `table-of-contents`
 - [ ] Write `Installation`, `API` and `Process`
 - [ ] Finish `Data`, `Code`, `Credits`, `Resources` and `License`
 - [ ] Fix code-snippet in `Code`
 - [x] Connect to API (functional-programming)
 - [x] Generate data, write to data.json
-- [ ] Create `D3` datavisualisation with 1000 books (part of data)
-- [ ] Update datavisualisation to complete dataset (+/- 7000 books)
+- [x] Create `D3` data visualization (part of data)
+- [ ] Add new layer in data visualization
+- [ ] Update data visualization to complete dataset (+/- 7000 books)
 - [ ] Filter data, turn on and off
-
+- [ ] Clean up code, functional
 
 ## Credits
 
@@ -138,3 +142,5 @@ Gijs Laarman `@gijslaarman`
 * [README.md example by Titus](https://github.com/wooorm/dictionary)
 
 ## License
+
+MIT © Luna May Johansson

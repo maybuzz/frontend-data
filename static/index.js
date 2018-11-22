@@ -1,11 +1,17 @@
-"use strict"
+'use strict'
+// verdelen op taal
+// taal onderverdelen op genres
+// boeken per genre laten zien
+
+// sortByLanguage en byGenre 'nesten'
+
 
 // used Mike Bostock's Zoomable Circle Pack example; https://bl.ocks.org/mbostock/7607535
 // Dennis Wegereef @Denniswegereef, Folkert-Jan vd Pol @FjvdP and Titus Wormer @wooorm helped me setup this datavis
 
 d3.json('/data.json').then(result => {
-  var margin = 20
-  var diameter = 800
+  const margin = 20
+  const diameter = 750
 
   const svg = d3.select('#vis').append('svg')
     .attr('width', diameter)
@@ -15,34 +21,31 @@ d3.json('/data.json').then(result => {
 
   const color = d3.scaleLinear()
     .domain([-1, 5])
-    .range(["hsla(255, 80%, 80%, 1)", "hsl(228,30%,40%)"])
+    .range(['hsla(323, 80%, 82%, 1)', 'hsl(228,30%,40%)'])
     .interpolate(d3.interpolateHcl);
 
   // structure data
   // setup .nest() with Dennis Weegreef
   const sortByLanguage = d3.nest()
-    .key(d => d.language)
+    .key(d => d.originalLanguage)
     .entries(result)
-    .map(language => (
-      {
-        name: language.key,
-        children: language.values
-      }))
+    .map(language => ({name: language.key, children: language.values}))
 
-      const data = sortByLanguage.map(language => {
-    const bySubject = d3.nest()
-      .key(book => book.subject)
-      .entries(language.children)
-      .map(subject => {
-        return {
-          name: subject.key,
-          children: subject.values.map(book => ({...book}))
-        }
-      })
-    return {
-      name: language.name,
-      children: bySubject
-    }
+    console.log(sortByLanguage)
+
+    const data = sortByLanguage.map(language => {
+    // const byGenre = d3.nest()
+    //   .key(book => book.genres)
+    //   .entries(language.children)
+    //   // .entries(result)
+    //   .map(genre => {
+    //     return {
+    //       name: genre.key,
+    //       children: genre.values.map(book => ({...book}))
+    //     }
+    //   })
+    //   console.log(byGenre);
+    return { name: language.name, children: sortByLanguage }
   })[0]
 
   // const data = sortByLanguage.map(language => {
@@ -76,7 +79,7 @@ d3.json('/data.json').then(result => {
   const root = d3.hierarchy(data)
     // .sum(d =>  d.totalPages > 0 ? d.totalPages : d.children.totalPages / 2)
     .sum(d =>  d.totalPages)
-    .sort((a, b) => b.value - a.value);
+    .sort((a, b) => b.value - a.value)
 
 // console.log('root: ', root);
 
@@ -90,55 +93,53 @@ d3.json('/data.json').then(result => {
 
  // console.log('data: ', nodes);
 
-  var circle = g.selectAll("circle")
+  const circle = g.selectAll('circle')
     .data(nodes)
-    .enter().append("circle")
-      .attr("class", function(d) {
-        return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root"; })
-      .style("fill", function(d) { return d.children ? color(d.depth) : null; })
-      .on("click", function(d) { if (focus !== d) zoom(d), d3.event.stopPropagation(); });
+    .enter().append('circle')
+      .attr('class', function(d) {
+        return d.parent ? d.children ? 'node' : 'node node--leaf' : 'node node--root'})
+      .style('fill', function(d) { return d.children ? color(d.depth) : null})
+      .on('click', function(d) { if (focus !== d) zoom(d), d3.event.stopPropagation()})
 
-  var text = g.selectAll("text")
+  const text = g.selectAll('text')
     .data(nodes)
-    .enter().append("text")
-      .attr("class", "label")
-      .style("font-size", function(d) { return Math.min(.2 * d.r, (.2 * d.r - 8) / this.getComputedTextLength() * 24) + "px"; })
-      .attr("dy", ".35em")
-      .style("fill-opacity", function(d) { return d.parent === root ? 1 : 0; })
-      .style("display", function(d) { return d.parent === root ? "inline" : "none"; })
-      .text(function(d) {
-        return d.data.name || d.data.title; });
+    .enter().append('text')
+      .attr('class', 'label')
+      .style('font-size', function(d) { return Math.min(.2 * d.r, (.2 * d.r - 8) / this.getComputedTextLength() * 24) + 'px'})
+      .attr('dy', '.35em')
+      .style('fill-opacity', function(d) { return d.parent === root ? 1 : 0; })
+      .style('display', function(d) { return d.parent === root ? 'inline' : 'none'})
+      .text(function(d) { return d.data.name || d.data.title})
 
-  var node = g.selectAll("circle, text");
+  const node = g.selectAll('circle, text')
 
-  svg
-      .style("background", color(-1))
-      .on("click", function() { zoom(root); });
+  svg.on('click', function() { zoom(root) })
+      // .style('background', color(-1))
 
-  zoomTo([root.x, root.y, root.r * 2 + margin]);
+  zoomTo([root.x, root.y, root.r * 2 + margin])
 
   function zoom(d) {
-    var focus0 = focus;
-    focus = d;
+    const focus0 = focus
+    focus = d
 
-    var transition = d3.transition()
+    const transition = d3.transition()
         .duration(d3.event.altKey ? 7500 : 750)
-        .tween("zoom", function(d) {
-          var i = d3.interpolateZoom(view, [focus.x, focus.y, focus.r * 2 + margin]);
-          return function(t) { zoomTo(i(t)); };
-        });
+        .tween('zoom', d => {
+          let i = d3.interpolateZoom(view, [focus.x, focus.y, focus.r * 2 + margin])
+          return function(t) { zoomTo(i(t))}
+        })
 
-    transition.selectAll("text")
-      .filter(function(d) { return d.parent === focus || this.style.display === "inline"; })
-        .style("fill-opacity", function(d) { return d.parent === focus ? 1 : 0; })
-        .on("start", function(d) { if (d.parent === focus) this.style.display = "inline"; })
-        .on("end", function(d) { if (d.parent !== focus) this.style.display = "none"; });
+    transition.selectAll('text')
+      .filter(function(d) { return d.parent === focus || this.style.display === 'inline'})
+      .style('fill-opacity', function(d) { return d.parent === focus ? 1 : 0})
+      .on('start', function(d) { if (d.parent === focus) this.style.display = 'inline'})
+      .on('end', function(d) { if (d.parent !== focus) this.style.display = 'none'})
   }
 
   function zoomTo(v) {
-    var k = diameter / v[2];
-    view = v;
-    node.attr("transform", function(d) { return "translate(" + (d.x - v[0]) * k + "," + (d.y - v[1]) * k + ")"; });
-    circle.attr("r", function(d) { return d.r * k; });
+    const k = diameter / v[2]
+    view = v
+    node.attr('transform', function(d) { return 'translate(' + (d.x - v[0]) * k + ',' + (d.y - v[1]) * k + ')'})
+    circle.attr('r', function(d) { return d.r * k})
   }
 })
