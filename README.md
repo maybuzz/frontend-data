@@ -17,7 +17,26 @@
 
 ## Installation
 
+Clone the repo
+```bash
+git clone https://github.com/maybuzz/frontend-data
+```
 
+Create a `.env` file to store the key, you should get your own key to get access
+```bash
+touch .env
+echo "PUBLIC=01234567890" >> .env
+```
+
+Install `node_modules`
+```bash
+npm install
+```
+
+Start server to run project
+```bash
+node server
+```
 
 ## Introduction
 
@@ -39,14 +58,7 @@ I must say I'm not very proud of my data visualization. I'm happy I managed to g
 
 ### API
 
-Create a `.env` file to store the keys, your file should look like this;
-
-```
-PUBLIC=1e19898c87464e239192c8bfe422f280
-SECRET=4289fec4e962a33118340c888699438d
-```
-
-Use `npm install` to install `@gijslaarman/oba-scraper`, require the API in your index.js file. To create a connection to the API you need the `PUBLIC key` you stored in your `.env` file.
+Use `npm install` to install `@gijslaarman/oba-scraper` (see installation), require the API in your index.js file. To create a connection to the API you need the `PUBLIC key` you stored in your `.env` file.
 
 ```js
 const api = require("@gijslaarman/oba-scraper")
@@ -78,8 +90,6 @@ const search = {
 ```
 
 ### Code
-* `title`, `illustrator`, `otherAuthors`, `subject`, `pages` etc. -> Labels for collected data
-*
 
 This is a piece of code from `server/index.js`. This is where I collect my data from the API and perform checks.
 ```js
