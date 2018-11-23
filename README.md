@@ -1,6 +1,6 @@
 # Frontend-data
 
-![datavisje](datavizzz.png)
+![datavisje](img/datavizzz.png)
 
 ## Table of contents
 
@@ -21,30 +21,21 @@
 
 ## Introduction
 
-I made a datavisualisation about comic books in the public library of Amsterdam (OBA). I used the `OBA API` to collect the data. Read more about the data and code in `Data`
+I made a datavisualisation about comic books in the public library of Amsterdam (OBA). I used the `OBA API` to collect the data. Read more about the data and code in `Data`.
 
 ## Process
 
-I used `D3` and everything I learned with functional programming to create a data visualization. The circle packing I made turned out to be a bit harder than I thought.
+During this project I learned a lot about **D3**, working with **data** and **data visualizations** in general. I also did a lot more than you can tell from my visualization. I documented my process in `process.md`, here you can find all the progress I made during this project. I also documented everything I tried to do, but failed to, and all the steps I made to come to this point.
 
-At first I thought I needed to structure my data in the server, but this was wrong. Now I just collect the data I need and add the structure in D3. This makes it possible to add a size value which is needed to calculate the depth of the 'bubble'. I'm using `d3.nest()` to structure the data. Because I need to go deeper into the bubbles every time, I need to nest inside my nest. This works; I am able to show genre-bubbles with my books inside.
-
-Now I need a new layer. I need my books to be inside the genre-bubbles INSIDE a language bubble. This way I can visualize genres inside (original) language, and show my books per genre. If this works I am able to add a filter, so the user can choose to either see books per genre per language or just books per language. Not very interesting, but it's the best I can do...
-
-I struggled a lot to get the bubbles working. Titus and Folkert helped me a lot and we eventually managed to get it to work. Now I'm struggling to get my data structure right... I haven't even gotten started on the interaction part...
-
-I tried nesting my genres into my original language. For some reason this is an impossible task... I am able to show my books per language, but when I try to add a new layer (genres) it's not working the way I want it too.
-
-Nesting
-I started the nesting process in `const sortByLanguage`. Usually a nest results in `keys` and `values`. I need a different structure, I need `names` and `children`. To get these, I need to `map` and change the keys and values to names and children. This structure is needed to create my circle packing.
+I must say I'm not very proud of my data visualization. I'm happy I managed to get something in D3, but it is far from what I imagined it to be. Check `process.md` for more information.
 
 ## Data
 
-* `d3.nest()` -> used to structure my data in D3.
-* `.map` ->
-* `.split('/')` -> use to cut the string at the '/'
-* `.trim()` -> use to cut spaces off both sides
-* `Number()` -> used to covert the totalPages string to a number
+* `d3.nest()` used to structure my data in D3.
+* `.map` sort of 'loop', generates an array with data
+* `.split('/')` use to cut the string at the '/'
+* `.trim()` use to cut spaces off both sides
+* `Number()` used to covert the totalPages string to a number
 
 ### API
 
@@ -90,21 +81,14 @@ const search = {
 * `title`, `illustrator`, `otherAuthors`, `subject`, `pages` etc. -> Labels for collected data
 *
 
-This is a piece of code from `index.js`. This is where collect my data from the API.
+This is a piece of code from `server/index.js`. This is where I collect my data from the API and perform checks.
 ```js
 const data = response.map(book => (
   {
-    title: book.titles && book.titles[0] && book.titles[0].title && book.titles[0].title[0] ? book.titles[0].title[0]._ : null,
-    illustrator: book.authors && book.authors[0] && book.authors[0]["main-author"] && book.authors[0]["main-author"][0] ? book.authors[0]["main-author"][0]._ : null,
-    otherAuthors: book.authors && book.authors[0] && book.authors[0].author ? book.authors[0].author.map(author => ({author: author._})) : null,
-    subject: book.subjects && book.subjects[0] && book.subjects[0]["topical-subject"] && book.subjects[0]["topical-subject"][0] ? book.subjects[0]["topical-subject"][0]._ : null,
-    genres: book.genres && book.genres[0] && book.genres[0].genre ? book.genres[0].genre.map(genre => ({genre: genre._})) : null,
-    language: book.languages && book.languages[0] && book.languages[0].language && book.languages[0].language[0] ? book.languages[0].language[0]['_'] : null,
+    title: book.titles && book.titles[0] && book.titles[0].title && book.titles[0].title[0] ? book.titles[0].title[0]._.split('/')[0].trim() : null,
+    genres: book.genres && book.genres[0] && book.genres[0].genre ? book.genres[0].genre[0]._ : "overig",
     originalLanguage: book.languages && book.languages[0] && book.languages[0]['original-language'] ? book.languages[0]['original-language'][0]['_'] : null,
-    publisher: book.publication[0] && book.publication[0].publishers[0] && book.publication[0].publishers[0].publisher[0] ? book.publication[0].publishers[0].publisher[0]._ : null,
-    place: book.publication && book.publication[0] && book.publication[0].publishers && book.publication[0].publishers[0] && book.publication[0].publishers[0].publisher && book.publication[0].publishers[0].publisher[0] ? book.publication[0].publishers[0].publisher[0].$.place : null,
-    year: book.publication && book.publication[0] && book.publication[0].year && book.publication[0].year[0]['_'] ? book.publication[0].year[0]['_'] : null,
-    totalPages: response.description && response.description[0] && book.description[0]["physical-description"] && book.description[0]["physical-description"][0] ? book.description[0]["physical-description"][0]._ : null
+    totalPages: book.description && book.description[0] && book.description[0]["physical-description"] && book.description[0]["physical-description"][0] ? Number(book.description[0]["physical-description"][0]._.split(' ')[0]) : null
   }
 ))
 ```
@@ -113,13 +97,15 @@ const data = response.map(book => (
 
 - [x] Write (english) README.md
 - [x] Fix `table-of-contents`
-- [x] Connect to API (functional-programming)
-- [x] Generate data, write to data.json
+- [x] Connect to API, write data to data.json
 - [x] Create `D3` data visualization (part of data)
 - [ ] Add new layer in data visualization
 - [ ] Update data visualization to complete dataset (+/- 7000 books)
 - [ ] Filter data, turn on and off
-- [ ] Clean up code, functional
+- [x] Try faking-it-till-you-making-it (data manipulation)
+  - [x] Still fail...
+- [x] Document process in `process.md`
+- [x] Clean up code, functional
 - [x] Add styling
 - [ ] Use `npm delve` to replace my massive checks in server/index.js
 
@@ -128,7 +114,8 @@ const data = response.map(book => (
 Titus Wormer `@wooorm`    
 Folkert-Jan vd Pol `@FJvdP`    
 Dennis Wegereef `@Denniswegereef`    
-Gijs Laarman `@gijslaarman`
+Gijs Laarman `@gijslaarman`    
+Tim Ruiterkamp `@timruiterkamp`
 
 ### Resources
 

@@ -1,13 +1,13 @@
 {
   "name": "frontend-data",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "comic book data visualization, oba project",
+  "main": "static/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Luna May Johansson, @maybuzz",
   "license": "ISC",
   "repository": {
     "type": "git",
